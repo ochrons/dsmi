@@ -1,0 +1,103 @@
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+º                                                                             º
+º         úúúùùù          D       S       M       I          ùùùúúú           º
+º                                                                             º
+º      úúúùùù          Digital Sound & Music Interface          ùùùúúú        º
+º                                                                             º
+º         úúúùùù             (C) 1993 Otto Chrons            ùùùúúú           º
+º                                                                             º
+ÓÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ½
+
+
+        DSMI is a sound interface for PC compatible computers. It
+        provides programmers with a variety of functions to play music
+        and sound effects in their programs.
+
+        Here are some of DSMI's capabilities:
+
+        * Supports following sound sources:
+           - General DAC (also known as Covox)
+           - Sound Blaster 1.0 - 2.0
+           - Sound Blaster Pro (stereo)
+           - Pro Audio Spectrum (stereo)
+           - Pro Audio Spectrum+ (stereo)
+           - Pro Audio Spectrum 16 (16-bit, stereo)
+           - Sound Blaster 16 ASP (16-bit, stereo)
+           (also Gravis Ultra Sound in the future)
+        * Up to 32 simultaneous channels
+        * Plays MODs, STMs and many other formats
+        * Two operating modes for 8-bit sound sources:
+           - Fast mode
+           - Quality mode (better sound quality)
+        * Special 16-bit support, which means GREAT sound quality on
+          16-bit cards
+        * Very extensive programming interface that lets YOU decide what
+          to do
+        * Modular structure means easier upgrades (e.g. new sound cards)
+        * Printed manual (size is about 60 A4-pages)
+        * Example programs
+        * Utilizes 386 instruction mix to reach maximum performance,
+          286 NOT supported :-(
+        * Free 'Timer Service'-pack for easy timer handling
+        * Comes in 'C' and 'Pascal' versions, 'C' version also supports
+          assembler
+        * All C (or Pascal) source code is included for recompiling or
+          changing (yes, that means DMP/PMP too!)
+        * One FREE major upgrade
+
+        And last but not the least:
+        * DSMI IS DEFINITELY THE FASTEST PLAYER ON EARTH!!
+
+
+WHAT'S IN DSMI------------------------------------------------------------
+
+                          ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+                          º                 º
+                          º    C version    º
+                          º                 º
+                          ÓÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ½
+
+        - Made with Borland C++ 3.1, but should also work fine with
+          other compilers
+        - All C source code is included
+        - OBJs for assembler parts are included
+        - A library (DSMI.LIB) is provided for easy linking
+        - Following parts are written in C:
+                * Loaders for MOD, STM, and AMF
+                * Function to free module
+                * initDSMI() for easy initialization
+        - Everything else is written in assembler
+        - C source is compiled with BC++ and uses 386 instruction set
+        - If your C compiler is very old, make sure it can link with
+          assembler code using 386 instructions
+
+
+                          ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+                          º                  º
+                          º  Pascal version  º
+                          º                  º
+                          ÓÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ½
+
+        - Works with Turbo Pascal 6 and above
+        - Has TPUs for TP6 and TP7/BP7
+        - Comes with full Pascal source code, so you can recompile all
+          the TPUs
+        - All OBJs for assembler parts are included
+        - Supports Protected Mode (BP7 only)
+        - Following parts are written in Pascal:
+                * Loaders for MOD, STM, and AMF
+                * Function to free module
+                * initDSMI() for easy initialization
+                * Some functions to provide "C" memory handling
+                * Protected mode API
+        - Everything else is written in assembler
+        - If you have older version than 6, you may need to retouch some
+          of the functions
+
+HOW TO BUY DSMI--------------------------------------------------------
+
+        Files LICENSE.DSM and ORDER.DSM should come with this README
+        file. You need to print them, sign the License Agreement and
+        fill out the order form. Then just mail them to me and pay the
+        price. See ORDER.DSM for detailed information.
+

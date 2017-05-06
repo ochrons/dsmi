@@ -1,0 +1,22 @@
+var f,g:file;
+    p:pointer;
+begin
+  assign(f,'gmppiccy.scx');
+  reset(f,1);
+  getmem(p,768);
+  blockread(f,p^,10);
+  blockread(f,p^,768);
+  assign(g,'gmp.plt');
+  rewrite(g,1);
+  blockwrite(g,p^,768);
+  close(g);
+  freemem(p,768);
+  getmem(p,64000);
+  assign(g,'gmp.pct');
+  rewrite(g,1);
+  blockread(f,p^,64000);
+  blockwrite(g,p^,64000);
+  close(g);
+  close(f);
+  freemem(p,64000);
+end.

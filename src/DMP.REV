@@ -1,0 +1,310 @@
+			-----------------------
+			REVISION HISTORY OF DMP
+			-----------------------
+
+Version 2.11	MOD loader bugfix			February 22nd, 1993
+
+	- Some MODs used highly NON-STANDARD period values, so the
+	  change I made in version 2.02 caused erranous loading. Now
+	  the loader should handle any MOD.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 2.10    ProTracker tempo support                February 21st, 1993
+
+	+ Support for ProTracker's extended tempos has been added.
+	  Both regular and ProTracker-tempo (in BPM) are now shown on
+	  screen.
+	- Some minor bugfixes.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 2.02	Bugfixes				February 15th, 1993
+
+	- Bug in the MOD loader caused erranous volumes when instrument
+	  changed.
+	- When using a 16-bit soundcard, DMP could cause machine lock-up
+	  if a 386-program was run in DOS shell. Now it won't.
+	- Help screen showed wrong information about '-u' switch
+
+*** ---------------------------------------------------------------------- ***
+
+Version 2.01	UMB support defaults to DISABLED	February 9th, 1993
+		Bugfix
+
+	- Because of the many reports of memory problems with UMB
+	  options, it now is disabled by default.
+	  Use '-u' to ENABLE it, previously that switch DISABLED it!
+	- Pausing module with 'P' caused computer to lock up with
+	  a SB Pro. Now it's fixed.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 2.0     DMPMT and DMP combined into one .EXE    February 7th, 1993
+
+	* DMPMT no longer exist as a separate executable as it's
+	  functionality has been embedded into DMP.EXE. DMP now
+	  automatically detects DesqView and Windows and changes
+	  to DMPMT mode if either is detected. You can also force
+	  DMPMT mode with '-t' parameter which also accepts
+	  buffer size like '-t30000'.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.95    UMB support                             February 6th, 1993
+
+	+ DMP fully utilizes all available upper memory. Now you have
+	  more memory available in DOS shell and you can also load
+	  bigger modules.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.91á	MOD loader bug fix			February 5th, 1993
+
+	- A bug in the module loader, caused infinite loops if trying
+	  to load a corrupted module. Now DMP prompts wheather or not
+	  to play the module.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.90á	Support for SB16, PAS+ and PAS16	February 3rd, 1993
+		Many bugs fixed
+		386 support
+
+	+ 386 instruction set is now fully utilized. Which means that DMP
+	  won't run on a 286 anymore.
+	+ DMP is now the only module player capable of playing modules
+	  with 16-bit accuracy. On a SB16 or PAS16 DMP uses a new mixing
+	  routine that calculates at 16 bits. This gives you a lot clearer
+	  sound. Also a new mode, Quality mode, is introduced for 8-bit
+	  cards.
+	+ DMP is now a lot faster...
+	- Numerous bugs were fixed. Can't remember what bugs, though. :-)
+	- Support for DACs is removed, because of non-functionality.
+	- No more blue backgrounds after exiting (this wasn't a bug, but
+	  some people didn't like it...)
+	! Special thanks to Pirkka Palosaari for lending his SB16 ASP.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.41    DAC support                             December 2nd, 1992
+
+	+ Added support for general DACs. Try port value 378 (LPT1)
+	  If you want to have fun, use port values 3C9,3C0,3C2,61
+	  (BTW, it took about two hours to add support for DACs... :-)
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.4     8-channel support                       December 2nd, 1992
+
+	+ StarTrekker 8-channel MODs are now supported. If you have
+	  information about other 8+ channel formats, please send it to me.
+	+ Some internal changes to ease the way to Covox support in upcoming
+	  versions...
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.35    New features                            November 26th, 1992
+		Bug fixes
+
+	- Improved compatibility with MODs.
+	+ Now you can go backwards and forwards in the module.
+	+ New commandline option to supress modules looping. Great for
+	  BATs.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.34	Bug fixes				November 23rd, 1992
+
+	- Fixed a bug in arpeggio command
+	- There was a serious bug with SB Pro when playing at >20KHz
+	  (only in version 1.32 & 1.33). Now fixed.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.33	Bug fixes				November 16th, 1992
+
+	- Fixed the fine tune. Old versions played worse than versions
+	  without fine tune! Remember to reconvert AMF modules with invalid
+	  fine tunes.
+	- Also fixed a bug in portamento command.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.32    Faster!                                 November 15th, 1992
+		New feature
+
+	+ DMP is now faster than ever... just believe me!
+	+ I've added "the-most-wanted-feature": pattern jump!!!
+	  Just press B to break to next pattern...
+	- I might have fixed some bugs too, don't know for sure though....
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.31    Bug fixes                               November 2nd, 1992
+
+	- Fixed a bug in AMF converter/loader. DELETE YOUR OLD AMF FILES!!!
+	- Some incompatibles in MOD loader fixed.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.3     Enhancements                            October 21st, 1992
+		Bug fix
+		New file format AMF
+
+	+ Support for more octaves (0-4) in MODs, because some PC MOD-editors
+	  (notably ModEd) support these octaves.
+	+ Now DMP also loads StarTrecker modules
+	+ DMP now supports AMF modules and includes a program to convert
+	  STM or MOD formats into AMF.
+	* You can reach me through the Internet! Address is:
+	  c142092@cc.tut.fi
+	- Fixed a memory trashing bug
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.24    Bug fixes                               October 14th, 1992
+
+	- There was a killer bug that prevented SB Pro mode from functioning
+	  correctly. Now SB Pro owners can find a big improvement in sound
+	  quality!
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.23	New features				October 4th, 1992
+
+	+ The playing order of modules can now be scrambled with commandline
+	  option '/O'.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.22	Bug fix					October 3rd, 1992
+
+	- Now DMP shows the real sample rate which may differ from
+	  what user required, but only a little :-)
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.21	Bug fix					September 29th, 1992
+
+	- A bug in tempo command made some modules play REAL SLOW!
+	  I hope I have now fixed it.
+	+ I forgot to change the version number in 1.2 :-)
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.2     New player for DesqView                 September 28th, 1992
+
+	+ A player especially designed for DesqView is now included.
+	  Its name is DMPMT (DMP for MultiTaskers)
+	- There was a bug in the DMA routine.. Only in the 1.12 version. Fixed
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.12    Internal Changes                        September 28th, 1992
+                Bugfixes
+
+        + All sound output handling goes through SDI now,
+	  (SDI = Sound Device Interface) which allows me to add support
+	  for new sound cards easily by writing a new SDI!!
+        - There was a killer bug in the buffer calculation routine, but
+	  it only occured under very specific conditions. Finally fixed!
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.11    Bug fixes                               September 27th, 1992
+
+	- Pressing F10 changed volume to 57 not 64 as I intended. Fixed.
+	+ DMP now shows the current volume and sampling rate
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.1     New features				September 26th, 1992
+		Bugfixes
+
+	+ Function keys F1 - F10 change the overall volume.
+	+ SB Pro mixer's status is restored before exiting.
+	+ New command line option "/C" allows SB Pro users to play modules
+	  in SB (mono) mode.
+	- Retrig command with value of 0 caused a division error. Fixed.
+	- Now volumes greater than 64 are converted to 64.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.08    Bugfixes                                September 23rd, 1992
+
+        - Help screen stays on screen until keypress.
+        - Some minor bugs fixed
+        + Many internal changes (don't affect playing)
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.07    Instrument list                         September 6th, 1992
+                Bugfixes
+
+        - STMs and MODs are now played exactly the same, so
+          original Scream Tracker modules play a little bit too
+          fast.
+	+ Instrument list!
+        + Better DesqView compatibility (DMP asks DV for screen address)
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.06    Bugfixes                                August 31st, 1992
+
+        - MOD files are now played at the right speed and frequency
+          They were played too high previously.
+        + DMP is also a little bit faster!
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.05    Bugfixes                                August 30th, 1992
+
+        - many volume oriented bugs are now fixed in the Amiga module
+          loader
+        - Amiga modules are now played at right speed
+        - total pattern count shows now the correct value
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.04    Plastic surgery                         August 29th, 1992
+
+        + DMP's screen has changed a little.. :-)
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.03    New module commands                     August 28th, 1992
+                Bugfixes
+
+        - when a fatal disk error occured, the error message
+          was shown off-screen. Now it shows on the screen.
+        + Following module commands are now supported:
+                Set sample offset       (0x9)
+                Fine volume             (0xEA,0xEB)
+                Fine portamento         (0xE1,0xE2)
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.02    Bugfixes                                August 21st, 1992
+
+        - when module was paused, pressing keys 1-4 played the rest of the
+          sample. Now this can't happen.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.01    Bugfixes                                August 17th, 1992
+
+        - corrected the bug in the file search routine, DMP will not try
+          to load a non-existent module anymore!
+        - a bug in the volume table caused cracks in voice. Corrected.
+        + DMA-buffer's size reduced to 1024 (2048 before) so that
+          notes on-screen would better match the playing voice.
+
+*** ---------------------------------------------------------------------- ***
+
+Version 1.00    First release                           August 12th, 1992
+
+        - support for SB & SB Pro (stereo)
+        - loads both STM & MOD formats
+        - DOS shell
+

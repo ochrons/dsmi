@@ -1,0 +1,34 @@
+Comparing files OLD\AMP.H and AMP.H
+***** OLD\AMP.H
+        cmdVibrato, cmdToneVol, cmdVibrVol,  cmdBreak, cmdGoto, cmdSync,\
+        cmdRetrig, cmdOffset, cmdFinevol, cmdFinetune , cmdDelayNote,\
+        cmdNoteCut, cmdExtTempo, cmdExtraFineBender};
+***** AMP.H
+        cmdVibrato, cmdToneVol, cmdVibrVol,  cmdBreak, cmdGoto, cmdSync,\
+        cmdRetrig, cmdOffset, cmdFinevol, cmdFinetune , cmdNoteDelay,\
+        cmdNoteCut, cmdExtTempo, cmdExtraFineBender};
+*****
+
+***** OLD\AMP.H
+
+MODULE far *    ampLoadModule( const char far *name, short options );
+MODULE far *    ampLoadMOD( const char far *name, short options );
+MODULE far *    ampLoadSTM( const char far *name, short options );
+MODULE far *    ampLoadAMF( const char far *name, short options );
+MODULE far *    ampLoadS3M( const char far *name, short options );
+MODULE far *    ampLoad669( const char far *name, short options );
+void    ampFreeModule( MODULE far *module );
+short   far ampInit( short options );
+***** AMP.H
+
+MODULE far *ampLoadModule( const char far *name, short options );
+MODULE far *ampLoadMOD( const char far *name, short options );
+MODULE far *ampLoadSTM( const char far *name, short options );
+MODULE far *ampLoadAMF( const char far *name, short options );
+MODULE far *ampLoadS3M( const char far *name, short options );
+MODULE far *ampLoad669( const char far *name, short options );
+void        ampFreeModule( MODULE far *module );
+short   far ampInit( short options );
+*****
+
+

@@ -1,0 +1,10 @@
+@ECHO OFF
+echo This batch files extracts all music files in the
+echo Future Crew's Unreal demo into their own modules
+
+GRAB UNREAL.EXE TIGER.S3M 1728759 186633
+GRAB UNREAL.EXE SYMPHONY.S3M 1595316 133443
+GRAB UNREAL.EXE CHAOS.S3M 204015 197290
+REM TMP.S3M has actually many modules
+GRAB UNREAL.EXE TMP.S3M 805275 245251
+GRAB UNREAL.EXE LAVE2.S3M 668467 101992

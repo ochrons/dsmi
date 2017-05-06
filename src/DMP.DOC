@@ -1,0 +1,186 @@
+
+
+                                   DMP.DOC
+
+		Documentation for the Dual Module Player v2.10
+
+			Copyright (C) 1992,1993 Otto Chrons
+
+
+	   DMP.EXE is  a program  demonstrating the  capabilities of
+ the DSMI programming interface (DSMI stands for Digital Sound & Music
+ Interface). It's a standalone module  player with  which  you can
+ play STM-files  as well  as Amiga modules (MOD or NST). DMP is freeware
+ so you  can freely distribute	it and I hope you did, as long as you
+ include this help file with the executable.
+
+           Here is the command line syntax:
+
+           DMP [options] [modulename] [@listfile] [options]
+
+           Where:
+           ------
+	   modulename : name of a module (wildcards *,? allowed)
+	   listfile   : name of a file containing list of module names
+
+	   options  : -Sxxxx	      set sampling rate 4000-44100
+				      alternatively 4-44
+				      DON'T USE HIGHER THAN 21kHz ON A SB
+		      -H or -?	      show help screen
+		      -Ix	      interrupt number
+		      -Pxxx	      port address
+		      -Dx	      DMA channel
+		      -O	      Scramble module order
+		      -L	      Inhibit looping
+		      -M	      Mono mode (SB16 & PAS)
+		      -Q	      Quality mode (on 8-bit cards only)
+		      -U	      ENABLE UMB support
+                      -Cx             Desired card where x is:
+					1 for Sound Blaster
+					2 for Sound Blaster Pro
+					3 for PAS+
+					4 for PAS16
+					5 for SB16
+		      -T[xxx]	      Force multitasking mode with
+				      buffer size xxx (0-32000)
+
+	   You may have to  give your soundcard's IRQ  number and/or
+ port address if DMP fails to find them. If you don't provide both
+ values then DMP will assume 220h for port address, and 7 for interrupt
+ number. Giving  wrong address	will hang  your machine,  but wrong
+ interrupt number only stops the playing after a second. The "/C"
+ option is useful if you want to use some other card, than the one DMP
+ automatically detects.
+
+	   You don't  have  to add  any extension  to  the name,  because the
+ program will try  extensions AMF, STM, MOD and  NST if it  doesn't find
+ the file. Note that you can supply many modulenames and list files, up
+ to the internal limit of 50 modulenames.
+
+           Example:
+
+	   DMP klisje -s20 *.NST @goodmods
+
+           goodmods is a text file containing following lines:
+           occ-san
+           stars
+           intro3
+
+           DMP  will use  the  sampling  rate  of  20KHz  and  play following
+ modules: KLISJE.STM,  OCC-SAN.STM, STARS.MOD, INTRO3.MOD  and all .NST-files
+ in the current directory.
+
+
+                                How to use DMP
+
+           After DMP has  loaded the first  module, it starts  to play it and
+ shows some information about  it. DMP displays module's  name, its file size,
+ the amount of  memory used for module and sampling rate.  Because of the AMP's
+ Intelligent Module Loader  (IML) modules  usually take  10-30% less  space.
+ I've  seen a 244Kb module shrink into 151Kb when I loaded it with DMP. While
+ playing, DMP updates fields showing current pattern, row, elapsed time, volume
+ and sampling rate. Under these fields are four lines showing the current status
+ of the corresponding tracks. Here is an example:
+
+ ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+   bassdrum            ³ F#2 ³ 64 ³               ³ şşşşşşşşşşşşşşşşşşşşş
+   strings7            ³ D-3 ³ 20 ³ ARPEGGIO      ³ şşşşşşşşşşşşşşş
+   guitar42            ³ E-2 ³ 12 ³ PORT.NOTE     ³ şşşşşşşşşşş
+   guitar44            ³ G-2 ³ 57 ³ FINE VOL      ³ şşşşşşşşşşşşşşşşşş
+ ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+
+           The first  field shows  the instrument  currently playing  on that
+ track. Second is the note value, third its volume and fourth indicates what
+ special command is running. The bar simulates a VU  meter on music equipment,
+ but you shouldn't take it  as  an exact  representation of  the music  level,
+ it's there because it looks nice!
+
+ The rest of the screen is filled with instrument names. The numbers before an
+ instrument name indicate the channels that instrument is playing on.
+
+           Pressing 'H'  bring up a  quick-help showing  command line options
+ and keys used to control the program.
+
+           Keys :
+          ÄÄÄÄÄÄÄÄ
+
+           P        pause/resume module
+           1-4      turn track on/off
+           D        DOS shell (write EXIT to get back)
+           N        load next module (if you have supplied more than one)
+           S        stereo mode on/off (SB Pro), default is on
+	   arrrows  Jump to next/previous pattern
+           F1-F10   set volume
+           ESC      exit
+
+                            ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                            ³  N  E  W  ! ³
+                            ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+           DMP now supports new module format called AMF (Advanced
+ Module Format), which is actually the same format DMP uses internally.
+ Therefore modules using this format tend to be a lot smaller than with
+ normal STM or MOD format. Remember, that you cannot convert modules
+ from AMF back to STM or MOD! Use M2AMF.EXE to convert STMs or MODs.
+
+           Try this module player  with all the modules  you have, and if you
+ encounter problems with any modules, inform the author. Have fun.
+
+
+                           ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+                            Contacting the author
+                           ßßßßßßßßßßßßßßßßßßßßßßß
+
+       ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+       ³                                                                     ³
+       ³   By mail:                                                          ³
+       ³   ÄÄÄÄÄÄÄÄ                                                          ³
+       ³                                                                     ³
+       ³            Otto Chrons                                              ³
+       ³            Pyydyspolku 5                                            ³
+       ³            SF-36200 Kangasala                                       ³
+       ³            FINLAND                                                  ³
+       ³                                                                     ³
+       ³   Fidonet:                                                          ³
+       ³   ÄÄÄÄÄÄÄÄÄ                                                         ³
+       ³	    2:222/348.10					     ³
+       ³   SBC-net:                                                          ³
+       ³   ÄÄÄÄÄÄÄÄÄ                                                         ³
+       ³	    14:1510/500.10					     ³
+       ³                                                                     ³
+       ³   InterNet:                                                         ³
+       ³   ÄÄÄÄÄÄÄÄÄÄ                                                        ³
+       ³            c142092@cc.tut.fi (fastest method to contact)            ³
+       ³                                                                     ³
+       ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+        Newest version is always available at:
+
+       ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+       ³ R.A. LAW	  +358-37-49007    24h	 ³
+       ³ Express	  +358-31-236069   24h	 ³
+       ³ Moonlight shadow +358-0-3882575   24h	 ³
+       ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+        See DMP.REV for revision history.
+
+                            ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+                             For programmers only
+                            ßßßßßßßßßßßßßßßßßßßßßß
+
+
+	   DMP was  created with  Borland C++  3.1 and	it is  based on
+ DSMI's routines, so by ordering DSMI interface you could write programs
+ with similar capabilities. DSMI is a collection of  routines (for C and
+ Turbo Pascal) that allows programmers to play	modules in the
+ background, but unlike any other module player it also allows
+ simultaneous sound effects!! Up to 32 channels can be used which means
+ that you can have a module and sound effects playing in full stereo (on
+ cards which support stereo sound)! DSMI will  be available in February
+ 1993 and the price should be around 270FMK (about $70). Packet includes
+ full documentation (printed), OBJ files & libraries for C version, TPUs
+ for Turbo Pascal and also some of the source code so you can modify the
+ behaviour of DSMI. I will release a demonstration packet when DSMI
+ becomes available which will contain more specific information about
+ DSMI and its price. It will also have few demos using DSMI. Stay tuned!

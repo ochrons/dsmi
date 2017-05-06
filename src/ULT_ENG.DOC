@@ -1,0 +1,1250 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                DOCUMENTATION
+
+
+
+                        Û    Û Û  ßßßÛßßß ßßßßßÜ ÛßßßßÛ
+                        Û    Û Û     Û    Û ÜÜÜß Û ÜÜÜÛ
+                        ÛÜÜÜ Û ÛÜÜÜÜ Û    Û  ßÜÜ Û    Û
+
+                 ßßßÛßßß ßßßßßÜ ÛßßßßÛ Ûßßßß Û Üß Ûßßß ßßßßßÜ
+                    Û    Û ÜÜÜß Û ÜÜÜÛ Û     ÛÛ   ÛÜÜ  Û ÜÜÜß
+                    Û    Û  ßÜÜ Û    Û ÛÜÜÜÜ Û ßÜ ÛÜÜÜ Û  ßÜÜ
+
+                                  VERSION 1.31
+
+
+                          (C)1993 by MYSTERIOUS - MAS
+
+                               Programmed by
+                             Marc Andr‚ Schallehn
+
+                              English Docs by
+                           The Elven Nation (TEN)
+
+                       UNREGISTERED SHAREWARE VERSION !
+
+
+                  All mentioned Trademarks and Copyrights are
+                     registered by their respective owners.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                      2
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   TABLE OF CONTENTS:
+   ------------------
+
+        Cover Page.....................................Page  1
+        Table of Contents..............................Page  2
+
+     I. ULTRA TRACKER ? What is it ?...................Page  3
+        1.1. System Requirements.......................Page  3
+        1.2. Installation..............................Page  3
+        1.3. Brief Info................................Page  3
+        1.4. Where the newest version can be found.....Page  4
+	1.5. Contact address...........................Page  4
+        1.6. Problems and Solutions....................Page  4
+
+    II. The Overview...................................Page  5
+        1.   The Menus.................................Page  5
+        1.1. FILE......................................Page  5
+        1.2. EDIT......................................Page  5
+        1.3. SAMPLE....................................Page  7
+        1.4. PLAY......................................Page  8
+        1.5. QUIT......................................Page  8
+        1.6. INFO......................................Page  8
+        1.7. SETUP.....................................Page  9
+        1.8. ABOUT.....................................Page  9
+        1.9. HELP......................................Page  10
+        2.   The Editor................................Page  10
+        3.   Display Fields............................Page  11
+        4.   Channel Display...........................Page  12
+        5.   Keyboard Lay-out..........................Page  13
+        5.1. The keyboard..............................Page  10
+        5.2. Other Keys/Buttons........................Page  14
+        6.0. The Filesystem............................Page  16
+
+   III. Staffs, Effects, etc...........................Page  17
+        1.   The Staff.................................Page  17
+        1.1. Explanation of Effect Commands............Page  17
+        2.   The Effects...............................Page  18
+
+    IV. 1.   Conceptual Explanation....................Page  21
+        1.1. Samples...................................Page  21
+        1.2. Patterns..................................Page  21
+        1.3. Channel/Track.............................Page  21
+        1.4. GUS or Gravis Ultrasound..................Page  22
+        1.5. Registration..............................Page  22
+
+     V. Different Things...............................Page  23
+        1.   Known Bugs................................Page  23
+        2.   What is being planned for the next
+             version...................................Page  23
+        3.   Thank You!................................Page  24
+        4.   What is permitted with the shareware
+             version...................................Page  24
+
+    VI. Registration...................................Page  25
+        1.1. How would I benefit from registration?....Page  25
+        1.2. What do I get as a registerd user?........Page  25
+        1.3. How does one register?....................Page  26
+
+
+    VII.Version history of ULTRA TRACKER...............Page  27
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  documentation                  Page
+                           1993 by Mysterious - MAS                      3
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   I. ULTRA TRACKER ? What is it ?
+   -------------------------------------
+   ULTRA TRACKER is a music program that allows you to have the
+   simultaneous production of digital music compositions on
+   your PC, with up to 32 channels.
+
+   ULTRA TRACKER utilizes so called 'Samples' as instruments,
+   which can be ether 8 or 16 bit. As a final result, it allows
+   you to record your compositions with CD-quality.
+
+   1.1. And how can I do that?
+   ------------------------------
+
+   System Requirments:
+
+   - IBM PC/AT or compatable
+   - Gravis Ultrasound Soundcard (GUS)
+   - A VGA Graphic card (80x50 text mode)
+   - At least 256k free RAM
+   - About 200k free disk space
+   - Microsoft compatable mouse + mouse drive
+
+
+   1.2. Installation:
+   ----------------------
+
+   Copy all the files to the sub-directory you wish Ultra Tracker to
+   run from. Example (C:\Ultra)
+   Then start program with
+
+   C:\ULTRA>ultra[cr]
+
+   [cr] = enterkey
+
+   1.3. Brief Info:
+   ----------------
+
+   Ultra Tracker was programmed by Marc Andre' Schallehn.
+   Marc Andre' Shallehn retains the copyright to Ultra Tracker.
+
+   Marc Andre' Schallehn and members of Mysterious shall take no
+   responsiblity for any harm/damage caused by using this program.  It has
+   been extensively tested on various machine makes and models, but no
+   guarantees are made for the functionality of this program.  Use it at
+   your own risk. (But don't worry, nothing has happend to me yet :))
+
+
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                      4
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.4. Where is the latest Version ?
+   ----------------------------------
+
+   The latest version of Ultra Tracker can be requested around the clock
+   from the mail box "Do It !" It can also be found in the mail box
+   under the name (ULTRA.???) 
+   (??? = Version number).
+   Also available from the following numbers
+
+   Line1: 089-7591828  ZYX   2:246/276
+   Line2: 089-7594950  HST   2:246/176
+   Line3: 089-7591111  ZYX   2:246/76   mail only
+   Line4: 089-74510230  X.75/V.110 ISDN  2:246/876
+
+   1.5. I have a question, how do I reach you?
+   -------------------------------------------
+
+   Fido Net: Marc Schallehn @ 2:246/76.3
+   Internet: Marc_Schallehn@Doit.fido.de
+
+   Or by Mail: 
+
+   Mysterious
+   c/o Marc Schallehn
+   Camerloherstr. 141
+   80689 Mnchen
+   Germany
+
+  1.6. Problems and Solutions
+  ---------------------------
+
+  Problem: "My mouse cursor only goes to the 25th line !"
+  Cause: You have an outdated mouse driver.
+  Solution: Get a newer copy of the mouse driver for your mouse.
+            Two mouse drivers that are known to work are :
+          (Logitech driver v6.20 and Microsoft Driver v8.11)
+
+  Problem: "UT hangs just after the start !"
+  Cause: Autodetect function failing to detect your GUS (hardware)
+  Solution: Start UT with the parameter ultra[baseport]
+  (example: C:\>ULTRA 220)
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                      5
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   II. The overview of ULTRA TRACKER
+   ----------------------------------
+   1. The Menus :
+   --------------
+
+   ³úÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ...ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄú³
+   ³  FILE   EDIT   SAMPLE   PLAY   QUIT  ... INFO   SETUP   ABOUT   HELP  ³
+   ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ...ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+
+   By means of a simple click with the mouse, one can shift between
+   different menu selections. If you click on FILE for example, then
+   different menu selections will appear in the menu window, all of
+   which have to with FILE options (Load,Save).
+   The same applies to the other menu selections.
+
+   The following menu selections can be chosen:
+
+   1.1 FILE
+   ----------
+
+   LOAD SONG: Load a song file from the song directory.
+              Full song name must be entered.
+              Example : Demosong must be entered as demosong.ult
+
+   SAVE SONG: Save current song to the song directory.
+
+   CLEAR ALL: Erases everything you have entered and start fresh.
+
+   1.2 EDIT:
+   -----------
+
+   NEW PATTERN: Creats a new pattern for every channel.
+
+   DEL PATTERN: Deletes the last pattern of all open channels
+
+   NEW CHANNEL: Opens a new channel.
+
+   DEL CHANNEL: Erases the last respective channel and erases
+                all the patterns found therein (away they go!).
+
+   EDIT ON/OFF: Shifts editing mode on or off.
+
+   UNDO: Undo last block function.
+
+   CHANGE SONGNAME: A new name for the song can be given
+                    here (max. 32 Characters).
+
+   UNMARK BLOCK: Unmarks the previously market block.
+                 ("The block is considered not market !")                
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                      6
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+   START BLOCK: Marks the beginning of a block at the actual
+                cursor position.
+
+   END BLOCK: Marks the end of a block at the actual
+              cursor position.
+
+   COPY BLOCK: Copyies the marked block at the actual
+               cursor position.
+
+   CUT BLOCK:  Cuts all the data within a marked block.
+
+   EFFECT COPY: Like COPY BLOCK, but only effects are copied.
+                (Not note and sample number info!)
+
+   EFFECT SLIDE: This command looks at the start value and the end value
+                 of an effect and calculates the interlaced values within
+                 a marked block.
+
+   COPY PATTERN: Copies the current pattern into another pattern.
+
+   INSERT SEQ-POS: Insert a new possition into the sequence.
+
+   DELETE SEQ-POS: Erase the current sequencer possition.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                      7
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.3 SAMPLE
+   ----------
+
+   LOAD SAMPLE: Load a sample from the sample directory into the
+                GUS's onboard memory.
+                Once the sample is loaded, it can be given a file
+                name of up to 32 Characters. With the standard DOS
+                8 letter limit, it's not always easy to recognize what
+                kind of sample it is.
+
+   SAVE SAMPLE: Save a sample to disk. In order to load it again, the
+                NEG SAMPLE option must be turned on.
+
+   REMOVE SAMPLE: Erase the chosen sample from the GUS's onboard memory
+                  and change all occurances of the sample in the song to
+		  0 and change all other sample numbers to point to the 
+                  right sample!
+                  
+
+   CHANGE SMPNAME: Here one can input a new name for the
+                   chosen sample.
+
+   SAMPLE LOOP START: Here, the starting point of the sample-loop
+                      can be specified.
+
+   SAMPLE LOOP END: Here, the ending point of the sample-loop
+                    can be specified.
+                    The LOOP-END-point must always be greater then
+		    the LOOP-START-Point.
+
+   CHANGE 8/16 BIT: Changes the resolution of the sample from 8 bit
+                    to 16 bit (and vice versa).
+
+   CHANGE SAMPLE VOLUME: Here, the volume of the sample can be
+                         adjusted.
+
+   CHANGE BIDI LOOP: Turns the Bidirection Mode of the sample off
+                     and on. This means: if the BIDI LOOP is off,
+                     then the loop will only play forwards.
+                     If the BIDI LOOP is on, the loop will initially
+                     play forward, then backwards, the forward (etc.)
+
+  SWAP SAMPLES: Switch two loaded samples.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                      8
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.4 PLAY
+   ----------
+
+   PLAY SONG: Plays the song from beginning to end
+              and back to the beginning again.
+
+   PLAY PATTERN: Plays the presently chosen pattern.
+
+   PLAY: Plays the song, starting at the current possition.
+
+   SYNCHRON START SONG: Begins the playing of the song with the first
+                        press of a key. (Practical, when a song should
+                        be played directly from the keyboard.)
+
+   SYNCHRON START PATTERN: Begins the playing of the selected pattern
+                           with the first press of a key.
+
+   STOP PLAYING: Ends playing.
+
+   1.5 QUIT
+   -----------
+
+   Here, one can leave/quit the program.
+   (But who would want to do that...:-) )
+
+   1.6 INFO
+   --------
+
+   Info given about the GUS-memory/storage.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                      9
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.7 SETUP
+   ---------
+
+   CHANGE SONG DIRECTORY: Here you can change the default directory
+                          your songs will be saved and loaded from.
+                          
+   WILDCARD: Here the defualt file mask for song files can be changed.
+             (Example: *.ult ; *.* ; a*.* ; xyz*.sam...).
+
+   CHANGE SAMPLE DIRECTORY: Here you can change the defualt directory
+                            your samples will be saved and loaded from.
+                            
+   WILDCARD: (s.WILDCARD) Here the defualt file mask for sample files
+             can be changed.
+             
+   CHANNEL JUMP: Shift the channel jump on or off. If the CHANNEL JUMP is
+                 on, the cursor jumps after each entry to the next field of
+                 the note editer.
+
+   SAVE SETUP: Saves/stores the setup on the harddrive/diskette.
+
+   POS/NEG SAMPLE: Here, one can input what kind of samples
+                   should be loaded. 
+		   (NEG = Sample data with sign)
+                   (POS = Sample data without sign). 
+		   Amiga Samples can be loaded if the NEG option is selected.
+
+   GER/US KEYBOARD: Switch the z and y keys!
+
+   1.8 ABOUT
+   ---------
+
+   Displays very important information about the program.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     10
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.9 HELP
+   --------
+
+   Guess what! Exactly! Gives an overview of a couple of
+   important small things. :-) (bald...)
+
+
+   2. The Editor
+   -------------
+
+   In the middle of the screen you can find the note editor:
+
+
+   Here the actual     Here, the           Here it is displayed
+   "Staff Position"    chosen channel      whether the channel
+   in the chosen       is displayed.       is shifted on or off.
+   channel is               ³                       ³
+   displayed.               ³                       ³
+        ³                   ³                       ³
+        ³          ÚÄÄÄÄÄÄÄÄÙ                       ³
+        ³          ³  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+                    
+      ÚÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+      ³POS³CHANNEL 0  ON ³
+      ÃÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+      ³   ³              ³
+      ³   ³              ³
+      ³ 00³----00-00-0000³<-- That is a "Staff".
+      ÃÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+      ³ 01³----00-00-0000³<- Here stand the "Staff",
+      ÃÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´   which can be edited.
+      ³ 02³----00-00-0000³
+      ³ 03³----00-00-0000³
+      ³ 04³----00-00-0000³
+      ÀÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+           ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿         ÄÄÄÄ
+         ..³<-CHANNELS->³........ <-->
+           ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ         ÄÄÄÄ                  
+                                
+            ³          ³          ÀÄÄ Scrolls all channels once
+         Here, the channels        to the left or right.
+         can be shifted around.    
+         (Simply click with
+         the mouse.)
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     11
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   3. The Display Fields
+   ---------------------
+
+   By means of clicking on the "+" and "-" the respective option
+   can be enlarged or shrunk.
+
+   ÚÄÄÄÄÄ´EDITÃÄÄÄÄÄÄÄ¿
+   ³-OCTAVE+        - ³ <ÄÄÄÄÄ Display the chosen OCTAVE.
+   ³-LINE JUMP+    -- ³ <ÄÄÄÄÄ Here, the quantity of the stave can be imput,
+   ³ CHANNEL JUMP --- ³ <ÄÄÄÄ¿ which should make the cursor jump ahead the
+   ³ EDIT         --- ³ <ÄÄ¿ ³ imputted amount of notes.
+   ³ BLK C--P--S--E-- ³ <Ä¿³ À The CHANNEL JUMP is supposed to jump to
+   .                  .   ³³   next note field after each note input.
+   .                  .   ³³   (Can be set on or off in the setup menu)
+   .                  .   ³³    
+   .                  .   ³ÀÄÄ Display EDIT mode status. ON or OFF
+   ÃÄÄÄÄ´PATTERNÃÄÄÄÄÄ´   ÀÄÄÄ Display of a marked block: C=Channel,
+   ³ PATTERN USE  --- ³ <ÄÄÄÄ¿ P=Pattern, S=Start, E=End.
+   ³-PATTERN POS+ --- ³ <ÄÄÄ¿³
+   ³-PATTERN SEQ+ --- ³ <ÄÄ¿³³
+   ³-PATTERN PLY+ --- ³ <Ä¿³³ÀÄ Total number of patterns.
+   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ   ³³ÀÄÄ The current pattern.
+                          ³ÀÄÄÄ Here you have to input the pattern that
+                          ³      will be played at the respective PATTERN
+                          ³      PLY possition.
+                          ÀÄÄÄÄ Here you select the currect pattern PLY
+                                possition. All song start with Pattern
+                                PLY 0.
+
+    úÄÄÄÄÄÄÄÄÄÅ SONGNAME ÅÄÄÄÄÄÄÄÄÄú
+    °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°  <Ä Name of the song.
+
+    úÄÄÄÄÄÄÄÄÄÄÅ SAMPLE ÅÄÄÄÄÄÄÄÄÄÄú
+   -°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°+ <Ä Name of the sample.
+   -ÄÄÄÄÄÄÄÄNUMBER:     °°°°°°°°°°°°+ <- The file name of the sample.
+                     
+                     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ The number of the sample.
+
+   ÚÄÄÄÄÄ´SAMPLEÃÄÄÄÄÄ¿
+   ³ LENGTH   ------- ³ <ÄÄÄ The size of the chosen sample.
+   ³ LOOP ST  ------- ³ <ÄÄÄ The loop-start point of the sample.
+   ³ LOOP END ------- ³ <ÄÄÄ The loop-end point of the sample.
+   ³ 8/16 BIT      -- ³ <ÄÄÄ Is the sample 8 or 16 bit?
+   ³ VOLUME       --- ³ <ÄÄÄ The volume of the sample.
+   ³ BIDI LOOP    --- ³ <ÄÄÄ Bidirectional loop: on or off.
+   ³-FINE TUNE+ ----- ³ <ÄÄÄ The fine-tune value of the sample.
+   ÃÄÄÄÄÄ´MEMORYÃÄÄÄÄÄ´
+   ³                  ³
+   ³FREE MEM    --- KB³ <Ä¿
+   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ   ÀÄ The amount in KB of available memory
+                             at your disposal.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     12
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   4. The Channel Display
+   ----------------------
+
+   The channel display is found in the lower region of the screen, and is
+   constructed in the following manner:
+
+   SCOPE 4³                      <ÄÂÄÄ If a note is played, a beat
+         3³                      <Ä´   for each channel will be
+         2³                      <Ä´   displayed.
+         1³                      <ÄÙ
+   CHANNEL³0 1 2 3 4 5 6 7 8...
+                   
+           ÀÄÁÄÁÄÁÄÁÄÁÄÁÄÁÄÁÄÄ Display of the conditions of the
+                               channels. Each number (or letter)
+                               stands for one of the 32 channels.
+                               * White = used and on
+                               * Light Gray = used and turned off.
+                               * Dark Gray = not used.
+                               * Blue = not used and turned off.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     13
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   5. THe Keyboard Lay-Out:
+   ------------------------
+
+   5.1. The keyboard:
+   ------------------
+
+   Just as on a real piano keyboard, you can input notes from the
+   computer keyboard:
+
+
+       c#  d#      f#  g#  a#      C#  D#      F#  G#  A#     <-Note
+   ÚÄÄÂÄÂÄÂÄÂÄÄÂÄÄÂÄÂÄÂÄÂÄÂÄÂÄÄÂÄÄÂÄÂÄÂÄÂÄÄÂÄÄÂÄÂÄÂÄÂÄÂÄÂÄÄ¿
+   ³  ³ ³ ³ ³  ³  ³ ³ ³ ³ ³ ³  ³  ³ ³ ³ ³  ³  ³ ³ ³ ³ ³ ³  ³
+   ³  ³S³ ³D³  ³  ³G³ ³H³ ³J³  ³  ³2³ ³3³  ³  ³5³ ³6³ ³7³  ³  <-Key
+   ³  ÀÂÙ ÀÂÙ  ³  ÀÂÙ ÀÂÙ ÀÂÙ  ³  ÀÂÙ ÀÂÙ  ³  ÀÂÙ ÀÂÙ ÀÂÙ  ³
+   ³   ³   ³   ³   ³   ³   ³   ³   ³   ³   ³   ³   ³   ³   ³
+   ³Z/Y³ X ³ C ³ V ³ B ³ N ³ M ³ Q ³ W ³ E ³ R ³ T ³Z/Y³ U ³  <-Key
+   ÀÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÁÄÄÄÙ
+     c   d   e   f   g   a   b   C   D   E   F   G   A   B    <-Note
+
+   ÀÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÙ ÀÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+        inputted octave              inputted octave + 1      <-Octave
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     14
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   5.2. The Other Keys
+   -------------------
+
+   Key:              ³ Meaning:                 Menu point in ()
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+   Editor:
+   -------
+                   0 ³ Pause or value 0
+               1...9 ³ Value of 1 to 9
+               a - f ³ Value A to F  (Hexadecimal)
+               [POS1]³ Jumps to beginning of pattern.
+                [END]³ Jumps to end of pattern.
+                 [->]³ Moves Cursor to the right.
+                 [<-]³ Moves Cursor to the left.
+                  []³ Moves Cursor up.
+                  []³ Moves Cursor down.
+                [Tab]³ Jumps to the next field of the note editor.
+        [Shift + Tab]³ Jumps to the previous field of the Noteneditor.
+             [INSERT]³ Adds a staff line.
+              [SPACE]³ Erase staff.
+            [Page up]³ Jump 4 lines up.
+            [Page dn]³ Jump 4 lines down.
+
+   Option:
+   -------
+          [CRTL + ->]³ Displays next pattern.
+          [CRTL + <-]³ Displays previous pattern.
+           [Alt + ->]³ Changes to the next channel.
+           [Alt + <-]³ Changes to the previous channel.
+                  F3 ³ Raises PATTERN SEQ.
+        [SHIFT +  F3]³ Lowers PATTERN SEQ
+                  F4 ³ Raises PATTERN PLY
+        [SHIFT +  F4]³ Lowers PATTERN PLY
+                  F5 ³ Raises LINE JUMP
+        [SHIFT +  F5]³ Lowers LINE JUMP
+                   + ³ Raises Octave.
+                   - ³ Lowers Octive.
+                   < ³ Stops the music output on all channels.
+                [F11]³ Scrolls the channel to the left  (<-)
+                [F12]³ Scrolls the channel to the right (->)
+
+   Sample Menu
+   -----------
+   [CRTL +"+"Numblk.]³ Next Sample
+   [CRTL +"-"Numblk.]³ Previous Sample
+        [CRTL + POS1]³ Change sample LOOP START.   (START SAMPLE LOOP)
+         [CRTL + END]³ Change sample LOOP END.     (END SAMPLE LOOP)
+    [Alt + BILD OBEN]³ Raises FINE TUNE.
+   [Alt + BILD UNTEN]³ Lowers FINE TUNE.
+           [CRTL + B]³ Changes 8 / 16 BIT.         (CHANGE 8/16BIT)
+           [CRTL + R]³ Changes BIDI LOOP.          (CHANGE BIDI LOOP)
+           [CRTL + V]³ Changes sample VOLUME.      (CHANGE SAMPLE VOLUME)
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     15
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   Menu Items:
+   -----------
+                  F1 ³ Creates New Pattern          (NEW PATTERN)
+                  F2 ³ Creates New Channel          (NEW CHANNEL)
+                  F6 ³ Loads Sample                 (LOAD SAMPLE)
+                  F7 ³ Changes Song Name            (CHANGE SONGNAME)
+                  F8 ³ Saves Song                   (SAVE SONG)
+                  F9 ³ Changes Song Directory       (CHANGE SONG DIRECTORY)
+                 F10 ³ Channel Jump on/off          (CHANGE TRACKJUMP)
+        [SHIFT +  F1]³ Erases Last Pattern          (DEL PATTERN)
+        [SHIFT +  F2]³ Erases Last Channel          (DEL CHANNEL)
+        [SHIFT +  F6]³ Erases Last Sample           (REMOVE SAMPLE)
+        [SHIFT +  F7]³ Changes Sample Name          (CHANGE SMPNAME)
+        [SHIFT +  F8]³ Loads Song From Disk         (LOAD SONG)
+        [SHIFT +  F9]³ Changes Sample Directory     (CHANGE SAMPLE DIRECTORY)
+       [SHIFT +  F10]³ Saves Setup To Disk          (SAVE SETUP)
+          [Alt + F10]³ Changes Sign Of Sample Data  (POS/NEG SAMPLE)
+            [Alt + S]³ Marks Blockstart             (START BLOCK)
+            [Alt + E]³ Marks Blockend               (END BLOCK)
+            [Alt + C]³ Copies Block                 (COPY BLOCK)
+            [Alt + K]³ Cuts Block                   (CUT BLOCK)
+                [Esc]³ Quit                         (QUIT)
+          [BACKSPACE]³ Plays Song                   (PLAY SONG)
+              [ENTER]³ Plays Pattern                (PLAY PATTERN)
+   [CRTL + BACKSPACE]³ Stops Playback Of Song       (STOP PLAYING)
+       [CRTL + ENTER]³ Stops Playback Of Song       (STOP PLAYING)
+          [Alt + Esc]³ Erase all data               (RESET ALL)
+            [Alt + I]³ Displays Info About GUS      (INFO)
+            [Alt + Y]³ Copy effects from the block  (EFFECT COPY)
+          [Alt + Esc]³ Begin from the start         (CLEAR ALL)
+            [Alt + O]³ Switch Blk-Mark off          (UNMARK BLOCK)
+       [Alt + Insert]³ Insert new Seq.Pos.          (INSERT SEQ-POS)
+          [Alt + Del]³ Erase the current Seq.Pos.   (DELETE SEQ-POS)
+           [CRTL + K]³ GER/US - Keyboard            (GER/US KEYBOARD)
+           [CRTL + U]³ Transposes Block up a octive (TRANSPOSE UP)
+           [CRTL + D]³ Transposes Block dn a octive (TRANSPOSE DN)
+            [Alt + U]³ UNDO                         (UNDO)
+            [Alt + L]³ Copy the current Pattern     (COPY PATTERN)
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     16
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+   6.0 The Filesystem:
+   -------------------
+
+   From Version 1.2 on, U.T. has contained a File system that should make
+   the loading of Songs and Samples easier. In order the access the file 
+   system, simply choose the sub-menu item "FILES" after you have clicked the
+   file menus LOAD SAMPLE or LOAD SONG.
+   (You can also access the file system by pressing the Enter key)
+   The Filesystem is constructed in the following way:
+
+
+                                      LOAD SAMPLE
+                             úÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄú
+
+                Here the file name is ÄÄÄÄ¿  Ú Here it displays if the file
+                displayed.                ³  ³ is a directory or the
+                                          ³  ³ size of the file.
+                                          ³  ³
+   Ú>°A° °B° °C° °D° °E° °F° ..°°°°°°°°°°³°°³°°DIRECTORY FREE GUS-RAM:
+   ³                         °EXAMPLE°°°°°³°°À>°DIRECTORY°
+   Ã>°G° °H° °I° °J° °K° °L° °SAMPLE°°°°°°³°°°°°DIRECTORY° BANK 1: 255KB<¿
+   ³                         °ALPHA1.GUS°<Ù°°°°°°°°23400b° BANK 2: 256KB<´
+   Ã>°M° °N° °O° °P° °Q° °R° °ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ° BANK 3: 256KB<´
+   ³                         °TEXTIT.001°°°°°°°°°°54000b° BANK 4: 256KB<´
+   Here you can change       °ZAPSOUND.SAM°°°°³°°°°23444b°               ³
+   the current drive    ÚÄÄÄ>ZZ°°°°°°°°°°°°°°³°°°°°3000b  Info about the
+   (With the Mouse)     ³                     ³             GUS's free
+                        ³                     ³             memory
+                    When you click on these   ³
+                    items with a mouse, you   ÀÄÄÄ With this bar    
+                    jump a page ahead or a        you can select the
+                    page behind                   file you want
+                                          .
+                                          .     ÚÄ Abort
+                                          .     
+   Sample data with or  ÄÄÄ> °POS SAMPLE°    °CANCEL° °OK° <Ä Confirm
+   without sign.
+
+
+
+   The bar is moved with the cursor keys. Confirm your selection with the
+   enter key, or cancel your selection with the Esc key.
+   The drive can be selected by pressing the respective key.
+   (Example: the 'a' key = drive A ;) ).
+   POS/NEG SAMPLE Can be changed by pressing the space bar!
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     17
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   III. Staves,Effects,Etc.
+   ------------------------
+
+   1. The "Staves"
+   ---------------
+
+   With the U.T. program, a staff is constructed differntly from what one
+   is used to with normal music staff construction. It does not really
+   have to do with a whole collection of different sounds, but simply
+   about the production of a sound, of a playing instrument, and and the
+   production of possible effects.
+
+   The whole thing looks like this:
+
+       C-1-00-00-0000
+       ³ ³ ³³ ³³ ³³³À Value of second effect (2nd place) [0-F]
+       ³ ³ ³³ ³³ ³³ÀÄ Value of second effect (1st place) [0-F]
+       ³ ³ ³³ ³³ ³ÀÄÄ Value of first effect  (2nd place) [0-F]
+       ³ ³ ³³ ³³ ÀÄÄÄ Value of first effect  (1st place) [0-F]
+       ³ ³ ³³ ³ÀÄÄÄÄÄ Second Effect [0-F]
+       ³ ³ ³³ ÀÄÄÄÄÄÄ First Effect  [0-F]
+       ³ ³ ³ÀÄÄÄÄÄÄÄÄ Sample Number (2nd digit) [0-F]
+       ³ ³ ÀÄÄÄÄÄÄÄÄÄ Sample Number (1st digit) [0-F]
+       ³ ÀÄÄÄÄÄÄÄÄÄÄÄ Octave [0-4]
+       ÀÄÄÄÄÄÄÄÄÄÄÄÄÄ Tone (note) [C - B] or [-] for Pause
+
+
+   1.1. Explanation of Effect Possibilities:
+   -----------------------------------------
+
+   It is possiable to assign effects to each note.
+   The following is an example of what can be done with effects:
+
+   C-1-01-00-0000
+          ³³ ³ ÀÄÄÄ Value of 2nd effect
+          ³³ ÀÄÄÄÄÄ Value of 1st effect
+          ³ÀÄÄÄÄÄÄÄ Effect 2
+          ÀÄÄÄÄÄÄÄÄ Effect 1
+
+   For example :
+
+   C-1-01-CB-E007
+
+   In this example, the note C-1 is played using the first sample.
+   The volume (Effect C) is set to E0.
+   In addition, the balance of the channel is changed (to value 7,
+   therefor, int the middle)
+
+   Your probably asking now : "And what kind of effects are there?"
+   You'll find the answer in the following section.
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     18
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.2. The Effects
+   ----------------
+
+   1 - Portamento up; [0-FF] Speed
+   -------------------------------------------
+   Raises the frequency of played note, in small increments.
+
+
+   2 - Portamento down; [0-FF] Speed
+   -------------------------------------------
+   Lowers the frequency of played note, in small increments.
+
+
+   3 - Tone Portamento; [0 - FF] Speed
+   ---------------------------------------------
+   Raises or lowers the frequency of the played note, until the
+   frequency of the new note is reached.
+   For example:
+        C-1-01-00-0000
+        D-1-00-03-00A0
+
+   Note C-1 is played; The frequency will be raised until the note D-1
+   is reached(speed = A0).
+   ATTENTION: it will be "slided" until the new note is reached, even if
+   other Portamento commands appear!
+
+
+   4 - Vibrato; [*0 - *F] Depth;[0* - F*] Speed
+   -------------------------------------------------------
+   Vibrates the played note.
+
+
+   5 - Special; [0 - FF]
+   ---------------------
+   Special Commands:
+
+   Value - Occurence:
+   ------------------
+    0   - Nothing
+    1   - Sample will be played without loop.
+    2   - Sample will be played backwards, without loop.
+    For Example:
+    C-1-01-0E-0002
+
+    Play the first sample, but backwards.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     19
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   A - Volume Slide; [0* - F*] Turn Up [0* - *F] Turn Down
+   -------------------------------------------------------
+   Slide the volume with the determined speed, up or down. In order to
+   turn the volume up, the first position of the effect value must be given.
+   In order to turn the volume down, the second position must be given.
+   For Example:
+        C-1-01-0A-0001 - Volume turned down with speed of 1
+        C-1-01-0A-0030 - Volume turned up with speed of 3
+
+   B - Balance; [0-0F] left - Right
+   ----------------------------------
+   Changes the balance of the channel. 16 step values are available.
+   0...7...F = left...middle...right
+
+   C - Volume; [0-FF] Volume
+   ------------------------------
+   Changes the volume of the played note.
+   Attention: The volume adjustment works logarithmically, not linearly!
+   I.E. 7F is not half as load as FF, but much quiter !
+
+   D - Pattern Break [00 - 63] (the values are in decimal !)
+   ---------------------------
+   Begins the next pattern at the given Position.
+   For Example:
+        C-1-01-0D-0000 Jumps to the begining of the next pattern
+        C-1-01-0D-0020 Jumps to Position 20 of the next pattern
+
+   E0 - Vibrato Value [00 - 0F]
+   ----------------------------
+   Set the strength of the Vibrato (Command 4 = Vibrato)
+   For Example:
+        C-1-01-0E-0001 Set minimal vibrato strength 
+        C-1-01-0E-0008 Set the virbrato strength to the normal setting
+
+   E1 - Finslide up [10 - 1F]
+   --------------------------
+   Like effect 1, but the frequency is raised only once per note.
+   For Example:
+        C-1-01-0E-0015 The frequency is raised to the value of 5
+
+   E2 - Finslide down [20 - 2F]
+   ----------------------------
+   Like effect 2, but the frequency is lowered only once per note.
+   For Example:
+        C-1-01-0E-0025 Frequency is lowered to the value of 5
+
+   E9 - Retring note [90 - 9F]
+   --------------------------
+   The Note is replayed before the next note is played. How often the 
+   note will be replayed depends on the speed of the song and the 
+   given value.                        
+   For Example:
+        C-1-01-0F-0006 Speed 6 (Therefor 6 beats per note)
+        C-1-01-0E-0093 Retrig Note on the 3rd beat (out of 6) 
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     20
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   EA - FineVolslide up [A0 - AF]
+   ------------------------------
+   Operates like Effect A, but only slides once per note.
+   (I.E. Turns up the volume)
+   For Example: 
+        C-1-01-0E-00A1 Incress the volume by a value of 1
+
+   EB - FineVolslide down [B0 - BF]
+   --------------------------------
+   Operates like Effect A, but only slides once per note.
+   (I.E. Turns down the volume)
+   For Example:
+        C-1-01-0E-00B3 Decress the volume by a value of 3
+
+   EC - Cut note [C0 - CF]
+   -----------------------
+   Cuts off the note on the given beat(The volume is turned off).
+   For Example:
+        C-1-01-0E-00E3 Plays the note till the 3rd beat
+
+   ED - Note Delay [D0 - DF]
+   -------------------------
+   Waits until the given beat, then plays note.            
+   For Example:
+        C-1-01-0E-00D3 Plays the note on the 3rd beat
+
+   F - Speed; [0-FF] Speed
+   ---------------------------------
+   Adjusts the speed of the song.
+   6 is the default adjustment setting (125 BPM);
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     21
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   IV. "Samples.?.., Patterns..!?... What in the world is that ???"
+   -----------------------------------------------------------------------
+
+   1. Explanation of Concepts
+   --------------------------
+   1.1. Samples
+   ------------
+
+   A sample is digitized sound, for example, a voice, a played note on a
+   piano, trumpet blast, ... in digital form. Actually, all that is
+   audiable can be sent through a so called Analog/Digital converter (ADC)
+   and saved to disk. 
+   Basically, two important factors determine the quality of a sample.
+   The first is resolution which, until present, has in most cases
+   concerned 8 bit (for example, SoundBlaster, Amiga ...)and also delivers
+   adequate, good quality for home use, but when the first 16 bit card came
+   into the market, it was recognized how much better the sound quality
+   was; so today, just about the only soundcards which appear are those
+   which can play and record in 16 bit resolution (for example, PAS 16, SB16 ASP
+   TBM ... and the GUS ;) ) The second factor is the sample frequency.
+   Older soundcards (8 bit) mostly play samples at 22khz, that is, they send
+   22,000 signals per second to the lineout port (or the opposite for recording).
+   Modern (16 bit) cards play samples at 44.1khz, which reaches CD-
+   Quality in 16-bit resolution. Unfortunately samples with higher quality
+   become more memory-intensive :-(...
+   
+   1.2. Patterns
+   -------------
+
+   A pattern is nothing more then a collection of 64 staves to one
+   block. That means, if you create a new pattern in Ultra Tracker, you
+   obtain a new block with 64 empty staves.
+   
+
+   1.3. Channel/Track/(Track/Channel)
+   ----------------------------------
+
+   On one channel of a soundcard only one sound or sample can be played
+   at a time. For example, you would need 3 channels to play a triad.
+   The Gus provides up to 32 channels; that means, a maximum of 32
+   samples (ha, now you know what that is ;-) ) can be played at a time.
+   
+   (Here, one can now give out a triad over one channel, by sampling the
+   triad of same kind of instrument and then replaying this sample on
+   one channel(?)... What? you completely don't understand a thing
+   anymore? Don't worry about it.)
+   
+   TIP: Another way of creating a triad (or any chord) is to sample the 
+        actual triad (or chord) and play it back. This method only
+        requires 1 channel for playback, but is less flexable then the
+        one note per channel triad method.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     22
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.4. GUS or Gravis Ultrasound
+   -------------------------------
+
+   This is, in my opinion, a very good soundcard from Advanced
+   Gravis and Forte Technology, which is necessary for the Ultra Tracer
+   program.
+   It uses 32x16bit channels, up to 1 MB of memory on board, a joystick port 
+   and midi interface
+   Ask your computer dealer! 
+   
+
+   1.5. "What is a registration of ULTRA TRACKER ?"
+   ----------------------------------------------------
+
+   That is something crucial, and something which every user of 
+   Ultra Tracker should do at least once in his life ;-)
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     23
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   V. Different Things
+   -------------------
+
+   1. Bugs
+   -------
+
+   Yep, there are always a few bugs :-(.
+   Known Bugs in version 1.3 are:
+
+   - Hmm, at the moment there are no known bugs :-)
+     If any appear and you have the opertunity to write through FIDO
+     then send me a note.
+     Marc Schallehn 2:246/76.3
+
+   I hope that the errors can be removed by the next version.
+
+   2. What is planned for the next version?
+   ----------------------------------------
+
+   - Elimination of the Bug's :-)
+   - A few new editing functions
+   - More effects
+   - A demosong with 16-bit samples :-)))
+   - Support for different sample formats( voc, wav...)
+   - Better english DOCUMENTATION ;-)
+   - Converter for 669, ... Song files
+   - Better *.ult file format docs
+   - And much more
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     24
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   3. A special thank you to:
+   --------------------------------
+
+   Martin Grimme: For the constant, sheerly unsolvable recommendations
+                  for improvement, for the Pro-Tracker Info, and the
+                  super demo song "Rocket".
+                  
+   Jochen Ott:    For the Magic ULTRA in his Mailbox "Do It !".
+                  (Do It ! Mailbox Mnchen 2:246/76: Tel.+49-89-7591828)
+
+   Renaissance:   For the distribution of Ultra-Dox !
+
+   My Parents:    For proofreading of the DOCUMENTATION :-)
+
+   Fritz Schober, Christian Deppe, Karsten Krieg, Erik Buisman
+   Lars Schehler, Marco Singer, Thorsten Dorsch, Robin Moojen
+   und Stefan L”we: For thier registration!
+
+   (Whoever would like to stay here, by all means READ ON! :-) )
+
+   4. What is one permitted with the shareware version of Ultra Tracker?
+   ---------------------------------------------------------------------
+
+   Copy/reproduction of the SHAREWARE version of ULTRA TRACKER is
+   expressly desired! That means you can copy/reproduce the SHAREWARE
+   version for your friends, acquaintances, colleagues, ... into all
+   mailboxes, without being penalized in any way. Moreover, no part of 
+   the program(the program itself, documentation, screens...) is permitted 
+   to be changed, in any manner. Shareware dealers can include the SHAREWARE 
+   version in thier collection; the reproduction price should not incress 
+   more then 100M(-17 US$). 
+   Whoever uses the program longer then 30 days, without registering, can be 
+   penalized!  
+   
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     25
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   VI. The Registration
+   --------------------
+
+   1.1 How would I benefit from Registration ?
+   -------------------------------------------
+
+   Well, not much really, for I've avoided implementing any kind of
+   reductions.
+   
+   In any case, the absence of reductions should NOT be a reason not to
+   register! I could have omitted the save-function, for example, but
+   who could really test the program properly.
+   
+   Besides, only through registration can I recognize whether or not
+   the ULTRA TRACKER program will be used at all, and why should I
+   further develop a program, that no one is interested in? 
+   
+
+
+   1.2. What do I gain as a registered user?
+   -----------------------------------------
+
+   A new disk with the latest version of the program.(without the 
+   burdensome scrolls at the Beginning and End) and the right to
+   two updates.
+
+   The Update
+   ----------
+
+   Each registered user has a right to have two "FREE" updates( one must
+   send me the original disk and enclose your return address ).
+   When the two updates are "used", a new fee of 10dm(10 US$,respectibely)
+   is due, a fee with which the user receivers two more free updates. 
+   
+
+   I think that is fair, since creating an update takes work.
+   (Copying, bringing things to the post office, etc..) !
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  DOCUMENTATION                  Page
+                           1993 by Mysterious - MAS                     26
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   1.3. How does registration work?
+   --------------------------------
+
+   If you want to use the program longer then the trial period of 30 days
+   (after the first use of the program), then you must register ULTRA
+   TRACKER. I have kept the registration fee extremely low, so that
+   anyone who wants to utilize the program, can afford to register it, thereby 
+   doing myself and you, a big favor :-) 
+   
+   The registration fee is only 20DM(including shipping and disk)
+   within Germany, and only 20 US Dollars, if one does not live in
+   Germany.
+
+   In order to register ULTRA TRACKER, please complete the file
+   REGISTER.TXT. Send the completed form along with payment to the
+   following address:
+   
+   Mysterious                       ATTENTION:
+   c/o Marc Schallehn               As of 7/1/93
+   Camerloherstr.141                note our new  
+   80689 Mnchen                    address.
+   GERMANY
+
+   You can pay the 20DM(20.- US Dollar) registration fee, either in
+   cash, check or transfer, into the following account :  
+   
+   Bayerische Vereinsbank
+   BLZ: 700 202 70
+   Account #: 45 444 740
+
+   Please submit for tracking purposes, the word "ULTRA" and include your 
+   complete address when transfering money!!! (Also mail me the completed 
+   REGISTER.TXT file. Thank You!)
+
+   No consideration can be taken for incomplete or illegibly written
+   registrations!
+   
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                         ULTRA TRACKER  Documentation                  page
+                           1993 by Mysterious - MAS                     27
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+   VII. Versions history of ULTRA TRACKER
+   --------------------------------------
+
+   - Version 1.0 - 06.06.1993
+     ------------------------
+
+   - Version 1.1 - 10.06.1993
+     ------------------------
+     - A few of the bugs eliminated.
+     - New Tone Protamento, Protamento up/down Routine (Pro Tracker Comp.)
+     - Changes to the menu structure.
+     - New functions: EFFECT COPY, SAVE SAMPLE
+     - UltraClick removed ! :-))
+     - The  "Absolute Silence" Bug killed :-) (Hi Mark !)
+     - New Effects: D, E1, E2, E9, EC
+
+   - Version 1.2 - 21.06.1993
+     ------------------------
+     - Mouse bug eliminated (?) (Let me know if it works :) )
+     - Some other bugs fixed   
+     - A few cosmetic changes          
+     - 3 new Editor Buttons: page up/dn, shift+ tab
+     - New Functions: CLEAR ALL, (Song) - WILDCARD, (Sample) - WILDCARD
+     - Sample number display in hex
+     - Sound quality with fewer then 32 tracks improved.
+       (Its still 32 channels, as its been thus far :))
+     - Filesystem Installed !!
+
+   - Version 1.3 - 13.07.1993
+     ------------------------
+     - Sample load and save click eliminated!    
+     - Block marking added.    
+     - Some small bugs fixed!
+     - "Scroll" Function added  
+     - New Functions: UNMARK BLOCK, EFFECT SLIDE, COPY PATTERN,
+       INSERT SEQ-POS, DELETE SEQ-POS, SWAP SAMPLES, PLAY,
+       GER/US KEYBOARD, EDIT ON/OFF, (REMOVE SAMPLE), TRANSPOSE UP,
+       TRANSPOSE DOWN, UNDO !!
+     - Sample Remove-System installed !! ("Not only the last !")
+     - New Effects: E0, ED, EA, EB
+     - *.mod to *.ult converter added!
+
+   - Version 1.31 - ???
+     ------------------
+     - Small BUG fixes
+
+

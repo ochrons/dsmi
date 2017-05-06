@@ -1,0 +1,305 @@
+**************************************************************************
+
+
+    Dynamic Driver System specification document
+
+
+Copyright:          Copyright (C) 1994 Virtual Visions Oy
+
+Description:        Full specification for DDS
+
+Document class:     For internal use only
+
+Author:             Otto Chrons
+
+Creation date:      August 2nd 1994
+
+Last change:        August 2nd 1994
+
+Current status:     Incomplete
+
+
+**************************************************************************
+
+
+
+
+1       What is Dynamic Driver System?
+
+
+1.1     Basic functionality
+
+
+    DDS is a system to load and unload drivers dynamically during
+    program execution. System provides a standard way to access
+    functions and resources inside the driver and also inside the
+    main program. The loaded driver can acquire resources from the
+    parent program and other drivers.
+
+
+1.2     The DDS interface
+
+
+    DDS defines functions that are used to get access to functions
+    and resources inside the driver/parent program. Each
+    function/resource is given an ASCII name which is used to get
+    actual pointer to that function/resource. When a driver is
+    loaded, it's supplied with a pointer to these nameserver
+    functions which are used to register functions/resources.
+
+
+1.3     Loading a driver
+
+
+    When a program wants to load a driver, it passes a name of that
+    driver to DDS which tries to load it. The format for real mode
+    drivers is basic EXE format, and for 32-bit protected mode
+    drivers it's OS/2 FLAT EXE format.
+
+    After the driver is loaded into memory, its Open function is
+    called. Actually this "function" is the start of the program.
+    Special values are set to registers to distinguish between Open,
+    Close and actual running of the driver (from DOS). Driver also
+    gets a pointer to DDS nameserver function so it can register the
+    functions/resources it can export. The driver can also get direct
+    access to functions/resources in other drivers and in the parent
+    program.
+
+    In the Open function the driver should do following things:
+
+        0) Check for validity of the driver (optional)
+        1) Initialize global data
+        2) Get access to DDS functions
+        3) Register all exported functions
+        4) Register all exported resources
+        5) Get access to external functions it needs
+        6) Return status code
+
+    DDS uses the status code to determine whether driver was opened
+    successfully or not. Incase of an error, DDS calls the Close
+    function of the driver.
+
+
+1.4     Using static drivers
+
+
+    DDS also has an option to use "static" drivers that are linked
+    into the program while compiling. Similar procedure to loading a
+    driver is executed when a static driver is "opened" with the
+    exception that nothing is actually loaded into memory.
+
+    With this feature you can use the same source to produce both
+    static and dynamic drivers.
+
+
+
+
+2       DDS nameserver interface
+
+
+    All DDS functions use 'pascal' calling convention
+
+
+2.1     Registering
+
+
+    When the driver or the parent program wants to export a function
+    or resource, it has to register it into DDS. In the registering
+    process each function/resource is given an unique ASCII name
+    which is then used to access that function/resource.
+
+    Following functions are used to register functions and resources:
+
+
+        int ddsRegisterFunction(const char *funcName, void *functionPtr);
+
+        int ddsRegisterResource(const char *resName, void *resourcePtr, int resourceSize);
+
+    Functions return 0 if registering was successful. If the name was
+    already in use and pointers didn't match it will return
+    DDS_DUP_NAME.
+
+
+2.2     Accessing
+
+
+    After a function or resource has been registered into DDS, it can
+    be accessed by getting a pointer to it with following DDS
+    functions.
+
+
+        int ddsAccessFunction(const char *funcName, void **ptrFuncPtr);
+
+        int ddsAccessResource(const char *resName, void **ptrResourcePtr, int *resourceSize);
+
+    If function/resource was found, return value will be 0 otherwise
+    it's DDS_UNKNOWN_FUNC or DDS_UNKNOWN_RES.
+
+    NOTE! You have to pass pointers to "funcPtr" and "resourceSize"
+    variables, not the actual variables.
+
+
+2.3     Example of registering/accessing
+
+
+    In parent program:
+
+        ddsRegisterFunction("AllocMem",D_malloc);
+
+
+    In the sound driver's Open function:
+
+
+        void    *(*_malloc)(size_t size);
+
+        ddsRegisterFunction("DetectSoundDevice",detectSB);
+
+        ddsAccessFunction("AllocMem",(void**)&_malloc);
+
+
+    and in the parent program
+
+
+        int     (*detectSound)(void);
+
+        ddsAccessFunction("DetectSoundDevice",(void**)&detectSound);
+
+
+
+
+
+
+3       Loading drivers, driver format
+
+
+3.1     Driver file format
+
+
+    For real mode programs DDS drivers use standard EXE format. The
+    Open function for the driver is actually the start position of
+    the EXE. Also Close function is in the same place.
+
+    To distinguish a standard EXE from DDS driver there must be a
+    special mark in the EXE header.
+
+    The "Initial SS" field is set to 4444h ('DD')
+    and "initial SP" field is set to 5353h ('SS')
+
+    The regular 'MZ' ID in EXE is changed to 'DS'
+
+
+3.2     Loading a driver
+
+
+    When your program needs to load a DDS driver, it calls:
+
+
+        int ddsLoadDriver(const char *driverName);
+
+    this function loads the driver into memory and calls its Open
+    function. As the Close function is at the same location the
+    driver must examine registers to function accordingly.
+
+
+    for real mode drivers
+
+        OPEN
+        ----
+
+        EAX     = 'OPEN' = 4E45504Fh
+        ES:BX   = pointer to ddsAccessFunction
+
+        CLOSE
+        -----
+
+        EAX     = 'CLSE' = 45534C43h
+
+
+    for protected mode drivers
+
+        OPEN
+        ----
+
+        EAX     = 'OPEN' = 4E45504Fh
+        EBX     = pointer to ddsAccessFunction
+
+
+        CLOSE
+        -----
+
+        EAX     = 'CLSE' = 45534C43h
+
+    With the 'ddsAccessFunction' the driver can access all the other
+    DDS functions by using their names as register names.
+
+    i.e. ddsAccessFunction("ddsRegisterFunction",(void**)ddsRegisterFunction);
+
+    ddsLoadDriver returns following return codes:
+
+    positive value  = driver loaded successfully, return value is a
+                      tag for the driver.
+
+    DDS_NOT_FOUND   = driver file was not found
+
+    DDS_INV_FRMT    = driver had invalid file format
+
+    DDS_ERR_OPEN    = driver's Open fuction returned an error (use
+                      ddsOpenError function to get the actual error
+                      code returned by the driver.
+
+
+
+
+
+4       Static drivers
+
+
+    If you are using static drivers you can run their Open function
+    with ddsOpenStaticDriver.
+
+
+        int ddsOpenStaticDriver(void *driverOpenFunction);
+
+    The return values are the same as with 'ddsLoadDriver'
+
+
+
+
+
+5       Unloading drivers
+
+
+    When the program has no use for the driver or is about to
+    terminate it should unload the driver. Unloading the driver calls
+    the Close function of the driver and releases any allocated
+    memory for the driver (if it is a dynamic driver).
+
+
+        int ddsUnloadDriver(int driverTag);
+
+    returns 0 if driver was unloaded successfully.
+    DDS_INV_TAG if invalid driver tag
+
+
+
+
+
+6       Useful things
+
+
+6.1     Exported functions
+
+
+    Exported (registered) functions should all use 'pascal' calling
+    convention to make them as compatible and language independent as
+    possible.
+
+
+6.2     Driver size
+
+    Real mode drivers are limited to 64kB but protected mode drivers
+    can be of any size.
+
+    You should extract common functionality from drivers to one
+    driver and then access the functions in that driver (for example
+    DMA driver from sound drivers).

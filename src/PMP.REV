@@ -1,0 +1,228 @@
+
+     컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+     Protected Module Player PMP (C) 1993 Jussi Lahdenniemi and Otto Chrons
+     컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴
+
+                               Revision history
+
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.33    New DSMI                                May the 23th, 1994
+                   Released with the new DSMI,
+                   nothing new.
+
+       - Please do not upload this anywhere. This is ONLY a BETA release
+         sent with the new DSMI.
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.32    More keys                           October the 10th, 1993
+                   GUS support
+                   Bug in the loader fixed
+
+       - You can now enable/disable also the channels 11-16 by pressing the
+         number of the channel with alt.
+       - Gravis Ultrasound now supported. Unfortunately, no bars nor power
+         meters with it. Maybe in the future.. Anyway, no power meter would
+         be needed, anyway -- playing with GUS takes approximately half a
+         scanline in 486/33.. ;)
+       - A bug in the loader part fixed. I don't know if it helps or not,
+         but it's fixed now, anyway..
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.31    Bugfixes                           September the 9th, 1993
+                   Totally new volume bars
+
+       - Returning from the DOS shell, the colors were not set, resulting
+         to a really ugly screen.
+       - A couple of bugs fixed in the S3M loader. Hope it works with all
+         the S3Ms now. If not, please report.
+       - I totally rewrote the colorbar routine. This routine now supports
+         up to 16 bars (the other colors on the screen will be masked off
+         as you get more bars, though), and is much faster than the
+         previous one. It also supports bars starting and ending wherever
+         they want, so that I made some choices for the volume bars:
+         original top-bouncing ones, traditional ones that come from the
+         floor, and nice ones that bounce in the middle of the screen.
+         Try them by pressing B..
+       - In the fading routine there was a bug. Most clearly it occured
+         while the end screen was being shown: some noise was heard. Now
+         fixed.
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.30    Bugfix                             September the 2nd, 1993
+                   Layout changed
+                   More time for playing!
+                   Power meters
+                   Colors changed
+                   Internet address changed
+
+       - Bugfix: A bug in the 669 loader fixed
+       - Screen layout changed a little, because
+       - I wanted to have more time to calculate music. Now the bars eat
+         less power, and maybe also users of slower machines can use them..
+       - Power meters added. They are the little bouncing bars in the
+         borders of the screen.
+       - I decided to radically change the colors of the PMP. I chose blue,
+         as you can see.. I hope you like the new colors. There may be
+         an unchanged color somewhere (resulting as a flashing/almost
+         invisible color). If you notice one, please tell it to me.
+       - Because of these color changes, PMP now no longer works with EGA.
+         Sorry.. anyway, no VGA check is made, so you may hear music,
+         anyway.. Try!
+       - I finally got a real Internet account. The address is
+         jlahd@clinet.fi. Please use this instead of the old one.
+       - There still is a bug in the S3M loader. For some odd reason, it
+         does not load for example cant.s3m (Why can't you remember/
+         Marvel of FC). I am working on it..
+       - GUS support COMING SOON
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.25    New quality mode                      August the 1st, 1993
+                   New AMF version support
+                   Bugfixes
+
+       - New quality mode added.
+       - New AMF format supported. Modules converted with a new version of
+         m2amf were not played correctly.
+       - Bugfixes
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.24    Bugfix                                  May the 25th, 1993
+                   Changed addresses
+
+       - PMP didn't like 669 modules with too many patterns. It reported
+         module as corrupted... Now fixed.
+       - My netmail and email addresses have changed. I now have a better
+         Internet email address than before.. New addresses:
+         Fidonet 2:221/105.7, Internet email avatar@salpu.fipnet.fi
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.23    Bugfixes                                May the 24th, 1993
+                   ARIA support
+                   669 support
+
+       - S3M modules now play much better (commands are better supported)
+       - A bug in the STM and S3M loaders caused awful noises in modules
+         with very short looping instruments. Corrected, but not tested,
+         because I have no such modules.. Report if the bug is still there.
+       - Memory handling in V86 environment changed slightly. If you still
+         encounter runtime errors in the V86 mode, but not in the non-V86-
+         more, please report.
+       - PMP now supports the ARIA soundcard, though it does not work very
+         well with QEMM for some STRANGE reason. Sorry about that, I'm
+         trying to fix the bug..
+       - PMP now knows how to load the 669 modules. It also knows how to
+         play them... I guess...
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.22    Bugfixes                                 May the 6th, 1993
+                   ScreamTracker 3 support!
+
+       - I REALLY thought I had corrected the module list window updating
+         bug -- and, actually, I did. But, while correcting the bug I
+         happened to create a new one with the same result: nothing was
+         updated anyway.. Now definitely FIXED.
+       - A bug appeared into the memory handling in some version, I don't
+         know when. Anyway, it took about 30k of extra memory from DOS
+         shell when running with QEMM/EMM/other memory manager. Now fixed.
+       - Maybe also other bugs fixed. Too long a period between versions..
+       - PMP now plays ST3-modules (*.S3M)! There are three batch files
+         included to rip the music from Future Crew's demos Unreal, The
+         Party'93 -intro and Panic.
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.21    Bugfix                                March the 24th, 1993
+                   'Chameleon' volume bars
+
+       - After returning from the DOS shell PMP didn't update the module
+         list window properly (only the tags were shown, without the file
+         names). Corrected.
+       - Volume bars now change their color all the time. Looks fancy! :)
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.20    Bugfixes                              March the 16th, 1993
+                   Instrument window
+                   Volume bars
+                   New addresses
+
+       - A bug in the module disposing procedure sometimes caused the
+         computer to hang up. Fixed.
+       - Some other minor bugs fixed.
+       - Instrument window added
+       - Volume bars added.
+         !!! NOTE !!! Volume bars need very much CPU power. If there is
+                      not enough power, they will flicker. Press B to get
+                      rid of them.
+       - Layout was changed a little because of the changes above
+       - I have moved my point system into another address. Look at the
+         end screen or the documentation for the new information.
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.10    Bugfixes                               March the 6th, 1993
+                   SB Pro stereo support
+                   Module window added
+                   Screen layout changed
+
+       - A bug in the AMF loader fixed. Caused a runtime error 216 sometimes.
+       - The MOD loader was unable to load the 15-instrument mods. Corrected.
+       - A minor bug in the master volume fixed.
+       - SB Pro stereo support added.
+       - Added a window showing modules in the playing list.
+       - Mostly because of that, changed the screen layout slightly
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.01    Bugfixes                               March the 5th, 1993
+                   New module format
+
+       - A bug in module loader caused some patterns to black out from the
+         loaded module. Corrected.
+       - Problems with corrupted modules solved; previously they just caused
+         a memory-low -message to be shown, now they are handled correctly.
+       - The system is made a bit more stabile with some fixes. I hope it
+         helps somebody.. (It's not easy to write a DOS-shelling protected
+         mode application..)
+       - PMP is having problems with some disk caches. The system locks up
+         when you try to load something in the DOS shell. If somebody has
+         suggestions for solving this problem, please contact me.
+       - New AMF format with over four channels supported
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 2.0     Bugfixes                               March the 4th, 1993
+                   More module formats
+                   New outlook
+                   Enhancements
+
+       - Pro Audio Spectrum support did not work at all. Corrected.
+       - Also other bugfixes, but I can't remember what..
+       - Triton's Fast Tracker 6 and 8 channel module support added
+       - Changed the screen into 50-line mode.
+       - PMP now loads many modules to memory, so you can play multiple
+         modules at the background (and it takes no more memory from DOS!)
+       - Keyboard handler added, you can operate PMP also from DOS shell
+       - PMP now supports an environment variable, PMP, in which you can
+         save your preferred settings
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰
+
+   Version 1.0     First release                          March the 1st, 1993
+
+       - Plays modules just like DMP 2.11
+       - Loads STM, MOD and AMF files
+       - Runs in the protected mode
+       - Offers a DOS shell with even over 550k of memory left,
+         regardless of the size of the module!
+
+ 頰鋏桁컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴桁沆頰

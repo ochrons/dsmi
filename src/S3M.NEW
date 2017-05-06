@@ -1,0 +1,181 @@
+Comparing files OLD\S3MLOAD.C and S3MLOAD.C
+***** OLD\S3MLOAD.C
+                            if( note != 254 )
+                                note = (((note & 0xF0)>>4)-4)*12 + (note & 0x0F)+60;
+                            ins = buffer[i++];
+***** S3MLOAD.C
+                            if( note != 254 )
+                                note = (note>>4)*12 + (note & 0x0F)+12;
+                            ins = buffer[i++];
+*****
+
+***** OLD\S3MLOAD.C
+                                {
+                                insertCmd(cmdBenderTo,data);
+***** S3MLOAD.C
+                                {
+                                if( data > 127 ) data = 127;
+                                insertCmd(cmdBenderTo,data);
+*****
+
+***** OLD\S3MLOAD.C
+                        }
+                        if(c & 0x20)            // note & ins
+***** S3MLOAD.C
+                        }
+                        if( command == 'S' && (data >> 4) == 0xD && (data & 0xF) != 0 && note != 0xFF )
+                        {
+                            insertCmd(cmdNoteDelay, data & 0xF);
+                        }
+                        if(c & 0x20)            // note & ins
+*****
+
+***** OLD\S3MLOAD.C
+                                case 'E' :
+                                    if( (data & 0xF0) == 0xF0 )
+                                    {
+***** S3MLOAD.C
+                                case 'E' :
+                                    if( (data & 0xE0) == 0xE0 )
+                                    {
+*****
+
+***** OLD\S3MLOAD.C
+                                    else
+                                        insertCmd(cmdBender,data);
+                                    break;
+                                case 'F' :
+                                    if( (data & 0xF0) == 0xF0 )
+***** S3MLOAD.C
+                                    else
+                                    if( (data & 0xF0) == 0xF0 )
+*****
+
+***** OLD\S3MLOAD.C
+                                    {
+                                        insertCmd(cmdExtraFineBender,-(data & 0x0F));
+                                    }
+***** S3MLOAD.C
+                                    {
+                                        insertCmd(cmdFinetune,data & 0x0F);
+                                    }
+*****
+
+***** OLD\S3MLOAD.C
+                                    else
+                                        insertCmd(cmdBender,-data);
+                                    break;
+***** S3MLOAD.C
+                                    else
+                                    {
+                                        if( data > 127 ) data = 127;
+                                        insertCmd(cmdBender,data);
+                                    }
+                                    break;
+                                case 'F' :
+                                    if( (data & 0xE0) == 0xE0 )
+                                    {
+                                        insertCmd(cmdExtraFineBender,-(data & 0x0F));
+                                    }
+                                    else
+                                    if( (data & 0xF0) == 0xF0 )
+                                    {
+                                        insertCmd(cmdFinetune,-(data & 0x0F));
+                                    }
+                                    else
+                                    {
+                                        if( data > 127 ) data = 127;
+                                        insertCmd(cmdBender,-data);
+                                    }
+                                    break;
+*****
+
+***** OLD\S3MLOAD.C
+                                case 'I' :
+                                    insertCmd(cmdTremolo,data);
+***** S3MLOAD.C
+                                case 'I' :
+                                case 'R' :
+                                    insertCmd(cmdTremolo,data);
+*****
+
+***** OLD\S3MLOAD.C
+                                case 'K' :
+                                    if( data >= 16 ) data = data/16;
+                                    else data = -data;
+***** S3MLOAD.C
+                                case 'K' :
+                                    if( data >= 16 ) data >>= 4;
+                                    else data = -data;
+*****
+
+***** OLD\S3MLOAD.C
+                                case 'L' :
+                                    if( data >= 16 ) data = data/16;
+                                    else data = -data;
+***** S3MLOAD.C
+                                case 'L' :
+                                    if( data >= 16 ) data >>= 4;
+                                    else data = -data;
+*****
+
+***** OLD\S3MLOAD.C
+                                    break;
+                                case 'S' :
+                                    a = data >> 4;
+                                    data &= 0x0F;
+                                    switch(a)
+                                    {
+                                        case 9 :
+                                            insertCmd(cmdRetrig,data);
+                                            break;
+                                        case 1 :
+                                            insertCmd(cmdFinetune,-data);
+                                            break;
+                                        case 2 :
+                                            insertCmd(cmdFinetune,data);
+                                            break;
+                                        case 0xA :
+                                            insertCmd(cmdFinevol,data);
+                                            break;
+                                        case 0xB :
+                                            insertCmd(cmdFinevol,-data);
+                                            break;
+                                        case 0xC :
+***** S3MLOAD.C
+                                    break;
+                                case 'Q' :
+                                    insertCmd(cmdRetrig,data & 0xF);
+                                    break;
+                                case 'Z' :
+                                    insertCmd(cmdSync,data);
+                                    break;
+                                case 'G' :
+                                    break;
+                                case 'S' :
+                                    command = data >> 4;
+                                    data &= 0x0F;
+                                    switch(command)
+                                    {
+                                        case 0xC :
+*****
+
+***** OLD\S3MLOAD.C
+                                    }
+                                    break;
+                                case 'Q' :
+                                    insertCmd(cmdRetrig,data & 0xF);
+                                    break;
+//                              case 'Z' :
+//                                  insertCmd(cmdNoteCut,data);
+//                                  break;
+                            }
+***** S3MLOAD.C
+                                    }
+                                default :
+//                                  cprintf("Cmd %d data %d ",command,data);
+                                    break;
+                            }
+*****
+
+

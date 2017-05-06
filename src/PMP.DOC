@@ -1,0 +1,248 @@
+
+
+
+
+
+
+
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     Protected Module Player PMP (C) 1993 Jussi Lahdenniemi and Otto Chrons
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+                                  Version 2.31
+
+
+
+
+
+        Like the DMP, also PMP is just a demonstration about the possibilities
+     of the DSMI (Digital Sound and Music Interface). It is a module player,
+     which runs in the protected mode, offering lots of memory for the modules
+     to use. Also, because of this, the PMP gives you a fully-working DOS
+     shell, and takes only about 40k of memory regardless of the size of
+     the module! So, you can play a 700k module and still have over 550k of
+     memory free! If your computer is in the v86-mode (ie. you have a program
+     like QEMM installed) the PMP takes a little more memory (24k more),
+     because the buffers must reside in the low memory.
+
+        The command line syntax of the PMP is just the same as DMP's :
+
+           PMP [options] [modulename] [@listfile] [options]
+
+           Where:
+           ------
+	   modulename : name of a module (wildcards *,? allowed)
+	   listfile   : name of a file containing list of module names
+
+	   options  : -Sxxxx	      set sampling rate 4000-44100
+				      alternatively 4-44
+				      DON'T USE HIGHER THAN 21kHz ON A SB
+		      -H or -?	      show help screen
+		      -Ix	      interrupt number
+		      -Pxxx	      port address
+		      -Dx	      DMA channel
+		      -O	      Scramble module order
+		      -L	      Inhibit looping
+                      -M              Mono mode (SB16 & PAS)
+		      -Q	      Quality mode (on 8-bit cards only)
+                      -Bx             Volume bar type: 0=off, 1=middle,
+                                                       2=top, 3=bottom
+                      -Cx             Desired card where x is:
+					1 for Sound Blaster
+					2 for Sound Blaster Pro
+					3 for PAS+
+					4 for PAS16
+					5 for SB16
+                                        6 for Aria
+                                        7 for Windows SoundSystem
+                                        8 for Gravis Ultrasound
+                      -T[xxx]         Buffer size xxx (0-32000)
+                      -Fxxx           Force PMP to leave xxx kilobytes
+                                      of memory for the DOS shell
+                      -V              Force PMP to use its v86 mode support
+                                      (place the buffers to low memory)
+
+        You may have to  give your soundcard's IRQ  number and/or
+     port address if PMP fails to find them. If you don't provide both
+     values then PMP will assume 220h for port address, and 7 for interrupt
+     number. Giving  wrong address  will hang  your machine,  but wrong
+     interrupt number only stops the playing after a second. The "/C"
+     option is useful if you want to use some other card, than the one PMP
+     automatically detects.
+
+        You don't  have  to add  any extension  to  the name,  because the
+     program will try  extensions AMF, STM, MOD and  NST if it  doesn't find
+     the file. Note that you can supply many modulenames and list files, up
+     to the internal limit of 200 modulenames.
+
+           Example:
+
+	   PMP beyond -s20 *.NST @goodmods
+
+           goodmods is a text file containing following lines:
+           occ-san
+           stars
+           intro3
+
+        PMP  will use  the  sampling  rate  of  20kHz  and  play following
+     modules: BEYOND.MOD,  OCC-SAN.STM, STARS.MOD, INTRO3.MOD  and all
+     .NST-files in the current directory.
+
+        The above text was taken straight from the DMP's documentation. As you
+     can see: If you can use DMP, you can use PMP...
+
+        Normally PMP uses all free XMS memory for its own purposes, but if you
+     want to save some XMS for other programs, use the environment variable
+     DPMIMEM:
+
+     SET DPMIMEM=MAXMEM 1024
+
+     limits the XMS use to one MB.
+
+        Note : Borland's programs that run in the protected mode use also
+     this environment variable.
+
+        Another supported environment variable is PMP. You can write your
+     preferred settings into the variable, so you don't have to write them
+     every time you start the program. For example, if you have the PMP
+     variable set as follows:
+
+     SET PMP=/S30 /O C:\MODS\*.MOD
+
+     and then you run PMP like this:
+
+     PMP *.stm
+
+     PMP will be started just like if you had written
+     PMP /S30 /O C:\MODS\*.MOD *.stm
+     from the command line.
+
+
+ !!!!   The included files RTM.EXE and DPMI16BI.OVL must be in the path!   !!!!
+
+
+                            Using PMP
+                            ---------
+
+        There is a header in the top of the screen telling what program you
+     are using and other important info. In the right side of the screen
+     there is a big blue box with all the module names you have selected
+     in the command line. When a module is loaded into memory, it is marked.
+     That way it is easy to see which modules are to be played next, and
+     which modules are loaded. There is also a big brown box on the bottom
+     of the screen containing all the instruments used in the module.
+        The volume bars are made with palette, and they demand really lots
+     of CPU power. They flicker easily even in fast machines. I am sorry,
+     but buy a faster machine if the bars don't work.. ;)  - or press B.
+        After initializing everything it needs, PMP starts to load the first
+     module. After loading it, PMP starts to play the module and proceeds
+     with loading the next module. It loads as many modules as possible,
+     and then plays them from memory. If all the modules you selected do
+     not fit to the memory, PMP discards the module after playing it and
+     loads more modules. With the /F switch you can control the memory
+     allocation so that you always will have enough memory to shell to DOS.
+        While playing under PMP (not in the DOS shell), there is a status
+     bar just below the header text. This status bar shows the pattern
+     currently being played, the total number of patterns, the current row,
+     the master volume level, and indicators indicating which channels are
+     being played. It also helps you by telling that help is available by the
+     H key. The help screen that pops up as you press H is the same that the
+     /? or /H command line switch shows.
+
+     Keys while the module is being played :
+
+       Key        Meaning                              Also in DOS shell
+       ---        -------                              -----------------
+
+       P          Pauses / resumes the module          alt-F11
+       N          Next module                          alt-F12
+       H,?        Help screen
+       D          DOS shell (with lots of memory!)
+       C          Clear the information screen
+       S          Toggle SB Pro stereo mode on/off
+       B          Toggle the volume bars
+       F1-F10     Set the master volume
+       +,-        Change the master volume one step    shift-F11, shift-F12
+       Left,Right Jump to next/previous pattern        ctrl-F11, ctrl-F12
+       Up,Down    Scroll module list window
+       1,2,..     Turn track n on/off
+       Alt+1,2,.. Turn track n+10 on/off
+       <,>        Slower/faster screen update rate.
+                  If the bars flicker, try slowing
+                  the rate down. The faster rate, the
+                  quicker you see everything coming to
+                  the screen.
+       (,)        Decrease/increase the number of the
+                  volume bars.
+
+
+
+                         Contacting the authors
+                         ----------------------
+
+       If you have questions or comments about the PMP or the Pascal version
+    of the DSMI, contact Jussi Lahdenniemi:
+
+       ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+       ³                                                                     ³
+       ³   By mail:                                                          ³
+       ³   ÄÄÄÄÄÄÄÄ                                                          ³
+       ³                                                                     ³
+       ³            Jussi Lahdenniemi                                        ³
+       ³            Rautia                                                   ³
+       ³            SF-36420 Sahalahti                                       ³
+       ³            FINLAND                                                  ³
+       ³                                                                     ³
+       ³   Fidonet:                                                          ³
+       ³   ÄÄÄÄÄÄÄÄÄ                                                         ³
+       ³            2:221/105.7                                              ³
+       ³                                                                     ³
+       ³   InterNet:                                                         ³
+       ³   ÄÄÄÄÄÄÄÄÄÄ                                                        ³
+       ³            jlahd@clinet.fi                                          ³
+       ³                                                                     ³
+       ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+
+       To comment about the DMP or the C or ASM versions of the DSMI, contact
+    Otto Chrons :
+
+       ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+       ³                                                                     ³
+       ³   By mail:                                                          ³
+       ³   ÄÄÄÄÄÄÄÄ                                                          ³
+       ³                                                                     ³
+       ³            Otto Chrons                                              ³
+       ³            Pyydyspolku 5                                            ³
+       ³            SF-36200 Kangasala                                       ³
+       ³            FINLAND                                                  ³
+       ³                                                                     ³
+       ³   Fidonet:                                                          ³
+       ³   ÄÄÄÄÄÄÄÄÄ                                                         ³
+       ³	    2:221/105.10					     ³
+       ³                                                                     ³
+       ³   InterNet:                                                         ³
+       ³   ÄÄÄÄÄÄÄÄÄÄ                                                        ³
+       ³            c142092@cc.tut.fi (fastest method to contact)            ³
+       ³                                                                     ³
+       ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+
+
+                             For programmers only
+                             --------------------
+
+
+           PMP was  created with  Borland Pascal 7.0 and  it is  based on
+ DSMI routines, so by ordering DSMI interface you could write programs
+ with similar capabilities. DSMI is a collection of  routines (for C and
+ Turbo/Borland Pascal) that allows programmers to play  modules in the
+ background, but unlike any other module player it also allows
+ simultaneous sound effects!! Up to 32 channels can be used which means
+ that you can have a module and sound effects playing in full stereo (on
+ cards which support stereo sound)! DSMI is available and the price is
+ 270FMK (about $70). Packet includes full documentation (printed), OBJ
+ files & libraries for C version, TPUs for Pascal and also some of the
+ source code so you can modify the behaviour of DSMI. Stay tuned!

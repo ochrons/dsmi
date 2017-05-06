@@ -1,0 +1,48 @@
+tasm /zd amplayer.asm;mcplayer.asm;detpas.asm;detaria.asm;detsbhw.asm;detsb16h.asm;convsamp.asm;mixer.asm;sdi_dac.asm
+tasm /zd sdi_pas.asm;sdi_sb.asm
+tasm /zd sdi_sb16.asm;sdi_aria.asm;sdi_wss.asm;dmaprocs.asm;timeserv.asm;emshard.asm;vds.asm;gus.asm;cdi.asm;mcpreala.asm
+
+bpc /b /cp /v /$g+ example.pas
+bpc /b /cd /v /$g+ example.pas
+bpc /cp /v /$g+ pmp.pas
+
+lha a package\units cdi.tpu mcp.tpu gus.tpu amp.tpu sdi__dac.tpu sdi__pas.tpu sdi__sb.tpu sdi__sb16.tpu sdi__aria.tpu
+lha a package\units sdi__wss.tpu det_pas.tpu det_aria.tpu det_sb.tpu detgus.tpu mixer.tpu timeserv.tpu emhm.tpu vds.tpu
+lha a package\units mcpreala.tpu dsmi.tpu amfload.tpu modload.tpu stmload.tpu _669load.tpu s3mload.tpu mtmload.tpu farload.tpu
+lha a package\units csupport.tpu cdi.tpp mcp.tpp gus.tpp amp.tpp sdi__dac.tpp sdi__pas.tpp sdi__sb.tpp sdi__sb16.tpp
+lha a package\units sdi__aria.tpp sdi__wss.tpp det_pas.tpp det_aria.tpp det_sb.tpp detgus.tpp mixer.tpp timeserv.tpp
+lha a package\units mcpreala.tpp dsmi.tpp amfload.tpp modload.tpp stmload.tpp _669load.tpp s3mload.tpp mtmload.tpp farload.tpp
+lha a package\units csupport.tpp dpmiapi.tpp dsmi.inc
+lha a package\units loadm.tpu loadm.tpp loaders.tpu loaders.tpp vds.tpp
+
+bpc /b /cd /v /$g+ /dUSE_EMS example.pas
+
+lha a package\unitsems cdi.tpu mcp.tpu gus.tpu amp.tpu sdi__dac.tpu sdi__pas.tpu sdi__sb.tpu sdi__sb16.tpu sdi__aria.tpu
+lha a package\unitsems sdi__wss.tpu det_pas.tpu det_aria.tpu det_sb.tpu detgus.tpu mixer.tpu timeserv.tpu emhm.tpu vds.tpu
+lha a package\unitsems mcpems.tpu dsmi.tpu amfload.tpu modload.tpu stmload.tpu _669load.tpu s3mload.tpu mtmload.tpu farload.tpu
+lha a package\unitsems csupport.tpu dsmi.inc
+lha a package\unitsems loadm.tpu loaders.tpu
+
+lha a package\source cdi.pas mcp.pas gus.pas amp.pas sdi__dac.pas sdi__pas.pas sdi__sb.pas sdi__sb16.pas sdi__aria.pas
+lha a package\source sdi__wss.pas det_pas.pas det_aria.pas det_sb.pas detgus.pas mixer.pas timeserv.pas emhm.pas vds.pas
+lha a package\source mcpreala.pas dsmi.pas amfload.pas modload.pas stmload.pas _669load.pas s3mload.pas mtmload.pas farload.pas
+lha a package\source mcpems.pas csupport.pas dpmiapi.pas amplayer.asm mcplayer.asm detpas.asm detaria.asm detsbhw.asm
+lha a package\source detsb16h.asm convsamp.asm mixer.asm sdi_dac.asm sdi_pas.asm sdi_sb.asm sdi_sb16.asm sdi_aria.asm
+lha a package\source sdi_wss.asm dmaprocs.asm timeserv.asm emshard.asm vds.asm gus.asm cdi.asm mcpreala.asm amp.inc cdi.inc
+lha a package\source common.inc dma.inc gus.inc masm.inc mcp.inc model.inc state.inc target.inc timeserv.inc tasm.cfg
+lha a package\source loadm.pas loaders.pas dsmimem.inc
+
+lha a package\obj amplayer.obj mcplayer.obj detpas.obj detaria.obj detsbhw.obj detsb16h.obj convsamp.obj mixer.obj
+lha a package\obj sdi_dac.obj sdi_pas.obj sdi_sb.obj sdi_sb16.obj sdi_aria.obj sdi_wss.obj dmaprocs.obj timeserv.obj
+lha a package\obj emshard.obj vds.obj gus.obj cdi.obj mcpreala.obj
+
+lha a package\refguide \me\help\dsmirefp.hlp \me\help\dsmirefp.htx \me\help\dsmirefp.asc package\addref\*.*
+
+lha a package\examples example.pas pmp.pas example.exe example.amf effect*.raw
+lha a package\examples pmphdr.pas pmpscrn.asm pmpbar2.asm
+
+package\
+lha s *.lzh
+del *.lzh
+
+pkzip -e0 dsmi *.exe add\*.*

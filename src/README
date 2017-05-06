@@ -1,0 +1,26 @@
+
+              New features in DSMI (not in the document) :
+              --------------------------------------------
+
+
+ - SDIs for Aria and Windows Sound System. These SDIs are used just like
+   the other SDIs.
+
+ - Module loaders for *.669 and *.S3M. These modules are loaded just like
+   MODs, STMs and AMFs.
+
+ - PC speaker support for the DAC SDI. Use the port address $42 to play
+   with the PC speaker.
+
+ - The EMS heap manager. With this unit (EMHM.TP*) you can use EMS in your
+   program. The functions are quite self-explanary and they can be found from
+   the file EMHM.PAS in SOURCE subdirectory. Allocate EMS with allocEMS, then
+   call lockEMS with the handle, and you get an address for the piece of
+   memory in the EMS page frame.
+
+ - Now also all the ASM sources are included, except the mcplayer. If you
+   want to recompile these, define the l_pascal symbol (run TASM like this:
+   TASM /dl_pascal *.asm).
+   Also, if you are using the 3.2 version of Tasm (comes with the BP7.0),
+   use the switch /ut310, to use the tasm 3.10 compatible mode.
+

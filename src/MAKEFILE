@@ -1,0 +1,354 @@
+.pas.tpu:
+  bpc -CD -E.;\bp\units -M -$D+ -$G+ {$< }
+.pas.tpp:
+  bpc -CP -E.;\bp\units -M -$D+ -$G+ {$< }
+.asm.obj:
+  tasm /m5 /mx /dl_pascal /d__PASCAL__ /ut310 {$<;}
+.pas.exe:
+  bpc -CD -E.;\bp\units -M -V -$G+ {$< }
+
+UnitSoucesDOS = \
+ cdi.pas \
+ mcp.pas \
+ gus.pas \
+ amp.pas \
+ sdi__dac.pas \
+ sdi__pas.pas \
+ sdi__sb.pas \
+ sdi__sb16.pas \
+ sdi__aria.pas \
+ sdi__wss.pas \
+ detpas.pas \
+ detaria.pas \
+ detsbhw.pas \
+ detsb16h.pas \
+ detsb.pas \
+ detsb16.pas \
+ detgus.pas \
+ mixer.pas \
+ timeserv.pas \
+ emhm.pas \
+ vds.pas \
+ mcpreala.pas \
+ initdsmi.pas \
+ amfload.pas \
+ modload.pas \
+ stmload.pas \
+ _669load.pas \
+ s3mload.pas \
+ mtmload.pas \
+ farload.pas \
+ mcpems.pas \
+ csupport.pas
+
+UnitSoucesPROT = \
+ cdi.pas \
+ mcp.pas \
+ gus.pas \
+ amp.pas \
+ sdi__dac.pas \
+ sdi__pas.pas \
+ sdi__sb.pas \
+ sdi__sb16.pas \
+ sdi__aria.pas \
+ sdi__wss.pas \
+ detpas.pas \
+ detaria.pas \
+ detsbhw.pas \
+ detsb16h.pas \
+ detsb.pas \
+ detsb16.pas \
+ detgus.pas \
+ mixer.pas \
+ timeserv.pas \
+ mcpreala.pas \
+ initdsmi.pas \
+ amfload.pas \
+ modload.pas \
+ stmload.pas \
+ _669load.pas \
+ s3mload.pas \
+ mtmload.pas \
+ farload.pas \
+ csupport.pas \
+ dpmiapi.pas
+
+UnitFiles = \
+ cdi.tpu \
+ mcp.tpu \
+ gus.tpu \
+ amp.tpu \
+ sdi__dac.tpu \
+ sdi__pas.tpu \
+ sdi__sb.tpu \
+ sdi__sb16.tpu \
+ sdi__aria.tpu \
+ sdi__wss.tpu \
+ detpas.tpu \
+ detaria.tpu \
+ detsbhw.tpu \
+ detsb16h.tpu \
+ detsb.tpu \
+ detsb16.tpu \
+ detgus.tpu \
+ mixer.tpu \
+ timeserv.tpu \
+ emhm.tpu \
+ vds.tpu \
+ mcpreala.tpu \
+ initdsmi.tpu \
+ amfload.tpu \
+ modload.tpu \
+ stmload.tpu \
+ _669load.tpu \
+ s3mload.tpu \
+ mtmload.tpu \
+ farload.tpu \
+ mcpems.tpu \
+ csupport.tpu \
+ cdi.tpp \
+ mcp.tpp \
+ gus.tpp \
+ amp.tpp \
+ sdi__dac.tpp \
+ sdi__pas.tpp \
+ sdi__sb.tpp \
+ sdi__sb16.tpp \
+ sdi__aria.tpp \
+ sdi__wss.tpp \
+ detpas.tpp \
+ detaria.tpp \
+ detsbhw.tpp \
+ detsb16h.tpp \
+ detsb.tpp \
+ detsb16.tpp \
+ detgus.tpp \
+ mixer.tpp \
+ timeserv.tpp \
+ mcpreala.tpp \
+ initdsmi.tpp \
+ amfload.tpp \
+ modload.tpp \
+ stmload.tpp \
+ _669load.tpp \
+ s3mload.tpp \
+ mtmload.tpp \
+ farload.tpp \
+ csupport.tpp \
+ dpmiapi.tpp
+
+ObjFiles = \
+  amplayer.obj \
+  mcplayer.obj \
+  detpas.obj \
+  detaria.obj \
+  detsbhw.obj \
+  detsh16h.obj \
+  convsamp.obj \
+  mixer.obj \
+  sdi_dac.obj \
+  sdi_pas.obj \
+  sdi_sb.obj \
+  sdi_sb16.obj \
+  sdi_aria.obj \
+  sdi_wss.obj \
+  dmaprocs.obj \
+  timeserv.obj \
+  emshard.obj \
+  vds.obj \
+  gus.obj \
+  cdi.obj \
+  mcpreala.obj
+
+ASMFiles = \
+  amplayer.asm \
+  mcplayer.asm \
+  detpas.asm \
+  detaria.asm \
+  detsbhw.asm \
+  detsh16h.asm \
+  convsamp.asm \
+  mixer.asm \
+  sdi_dac.asm \
+  sdi_pas.asm \
+  sdi_sb.asm \
+  sdi_sb16.asm \
+  sdi_aria.asm \
+  sdi_wss.asm \
+  dmaprocs.asm \
+  timeserv.asm \
+  emshard.asm \
+  vds.asm \
+  gus.asm \
+  cdi.asm \
+  mcpreala.asm
+
+units.lzh: $(UnitFiles)
+  - del units.lzh
+  lha a units.lzh @&&|
+ cdi.tpu
+ mcp.tpu
+ gus.tpu
+ amp.tpu
+ sdi__dac.tpu
+ sdi__pas.tpu
+ sdi__sb.tpu
+ sdi__sb16.tpu
+ sdi__aria.tpu
+ sdi__wss.tpu
+ detpas.tpu
+ detaria.tpu
+ detsbhw.tpu
+ detsb16h.tpu
+ detsb.tpu
+ detsb16.tpu
+ detgus.tpu
+ mixer.tpu
+ timeserv.tpu
+ emhm.tpu
+ vds.tpu
+ mcpreala.tpu
+ initdsmi.tpu
+ amfload.tpu
+ modload.tpu
+ stmload.tpu
+ _669load.tpu
+ s3mload.tpu
+ mtmload.tpu
+ farload.tpu
+ mcpems.tpu
+ csupport.tpu
+ cdi.tpp
+ mcp.tpp
+ gus.tpp
+ amp.tpp
+ sdi__dac.tpp
+ sdi__pas.tpp
+ sdi__sb.tpp
+ sdi__sb16.tpp
+ sdi__aria.tpp
+ sdi__wss.tpp
+ detpas.tpp
+ detaria.tpp
+ detsbhw.tpp
+ detsb16h.tpp
+ detsb.tpp
+ detsb16.tpp
+ detgus.tpp
+ mixer.tpp
+ timeserv.tpp
+ mcpreala.tpp
+ initdsmi.tpp
+ amfload.tpp
+ modload.tpp
+ stmload.tpp
+ _669load.tpp
+ s3mload.tpp
+ mtmload.tpp
+ farload.tpp
+ csupport.tpp
+ dpmiapi.tpp
+
+unitsems.lzh :
+
+obj.$(PACKEXT): $(LIB_dependencies)
+  - del obj.$(PACKEXT)
+  $(PACKER) $(PACK_ADD) obj.$(PACKEXT) @&&|
+amplayer.obj
+detpas.obj
+detaria.obj
+detgus.obj
+detsb.obj
+detsb16h.obj
+detsbhw.obj
+mcplayer.obj
+convsamp.obj
+mcpreala.obj
+mixer.obj
+sdi_dac.obj
+sdi_pas.obj
+sdi_sb.obj
+sdi_sb16.obj
+sdi_aria.obj
+sdi_wss.obj
+timeserv.obj
+freem.obj
+loadm.obj
+amfload.obj
+modload.obj
+stmload.obj
+669load.obj
+s3mload.obj
+mtmload.obj
+farload.obj
+initdsmi.obj
+vds.obj
+gus.obj
+gusheap.obj
+cdi.obj
+dmaprocs.obj
+dsmimem.obj
+|
+
+objems.$(PACKEXT): $(LIB_dependencies)
+  - del objems.$(PACKEXT)
+  $(PACKER) $(PACK_ADD) objems @&&|
+freem.obj
+amfload.obj
+modload.obj
+stmload.obj
+669load.obj
+s3mload.obj
+mtmload.obj
+farload.obj
+emsheap.obj
+emshard.obj
+mcpems.obj
+|
+
+source.$(PACKEXT):
+  - del source.$(PACKEXT)
+  $(PACKER) $(PACK_ADD) source @&&|
+amfload.c
+initdsmi.c
+loadm.c
+freem.c
+modload.c
+stmload.c
+669load.c
+s3mload.c
+mtmload.c
+farload.c
+mcpreala.asm
+convsamp.asm
+emsheap.c
+emshard.asm
+mcpems.c
+sdi*.asm
+amplayer.asm
+mcplayer.asm
+det*.asm
+detgus.c
+detsb.c
+timeserv.asm
+*.inc
+mixer.asm
+vds.asm
+gus.asm
+gusheap.c
+cdi.asm
+dmaprocs.asm
+dsmimem.c
+d_watcom.asm
+makefile
+|
+
+include.$(PACKEXT): $(DSMI_HEADERS)
+  $(PACKER) $(PACK_FRESHEN) include $(DSMI_HEADERS)
+lib.$(PACKEXT): dsmi.lib dsmiems.lib
+  $(PACKER) $(PACK_FRESHEN) lib dsmi.lib dsmiems.lib
+examples.$(PACKEXT): example?.c dmp.c *.prj
+  $(PACKER) $(PACK_FRESHEN) examples @examples.lst
+toexe: dsmi.lib obj.$(PACKEXT) dsmiems.lib objems.$(PACKEXT) lib.$(PACKEXT) include.$(PACKEXT) source.$(PACKEXT) examples.$(PACKEXT)
+
+

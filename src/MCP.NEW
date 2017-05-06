@@ -1,0 +1,23 @@
+Comparing files OLD\MCP.H and MCP.H
+***** OLD\MCP.H
+#define ID_DAC 7
+
+***** MCP.H
+#define ID_DAC 7
+#define ID_ARIA 8
+
+*****
+
+***** OLD\MCP.H
+
+#ifdef __cplusplus
+***** MCP.H
+
+void far interrupt mcpCalibrate( void );
+int far mcpCalibrateInit( short delta, short accuracy );
+void far mcpCalibrateClose( void );
+
+#ifdef __cplusplus
+*****
+
+

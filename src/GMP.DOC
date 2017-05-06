@@ -1,0 +1,87 @@
+                                  16.12.1992
+
+   --------------------------------------------------------------------------
+
+                       GMP - the Graphical Module Player
+
+                           (C) 1992 Jussi Lahdenniemi
+                             and Otto Chrons (DSMI)
+
+   --------------------------------------------------------------------------
+
+
+                Like DMP earlier, GMP is not just a module player but a public
+        'beta-test' version of the DSMI. DMP is written in C, GMP in Pascal.
+        The DSMI is not yet available in C nor in Pascal. Please test this
+        program with all your modules and report any bugs you can find to the
+        author(s).
+
+
+                                     USAGE
+                                     =====
+
+                Using GMP is quite straightforward. By running it without any
+        commandline parameters, it will give you a brief description of the
+        parameters available. The format is:
+
+        GMP <Modulename> [-sxx] [-o] [-l] [-dx] [-z]
+
+        Where
+        <Modulename> specifies the module(s) you want to play. Wildcards are
+                     allowed.
+        -sxxxx       specifies the sampling rate. Default is 16kHz. You can
+                     specify the sampling rate in Hzs or kHzs (4000-22000 or
+                     4-22).
+        -o           play modules in random order (just like DMP's -o)
+        -l           do not loop modules
+        -dx          how the bars are drawn in the playing screen. X can be
+                     zero or one. You can change this setting during the
+                     playing by pressing B.
+        -z           remove instrument names from the bars. This is recommended
+                     for slower machines ( < 386/25 maybe). You can toggle this
+                     also in the playing screen with Z.
+
+        After you have succesfully executed the GMP, it displays some info on
+        the screen and then loads the first module and starts playing. After
+        you have recovered from your amazement ( :) ), try pressing H to get
+        the help screen. You can scroll the help screen with the up- and down-
+        arrows. Try everyting..
+
+                        COMMENTS ABOUT PROGRAMMING DSMI
+                        ===============================
+
+                Never would I have believed that programming a module player is
+        this easy! A fully working module player can be written with only about
+        twenty lines of Pascal. And, having so many features, GMP's source code
+        is only about 900 lines! So, after DSMI will be released, purchase it!
+                It was quite an interesting and challenging job to convert the
+        DSMI from C to Pascal. I had to cheat the Pascal compiler all the time
+        - never turn range checking on while programming with DSMI ;).. Anyway,
+        I was able to convert all the programs (with some help from Otto). So,
+        when the DSMI will be released, you will be able to purchase both the C
+        and the Pascal versions.
+
+
+                             CONTACTING THE AUTHORS
+                             ======================
+
+                Contact the authors anytime if you have something to ask, or
+        bugs to report. Write to Jussi Lahdenniemi if your problem is about
+        this player (GMP), and to Otto Chrons if your problem is about DSMI.
+        The addresses are:
+
+        Jussi Lahdenniemi
+        Rautia
+        SF-36420 Sahalahti
+        FINLAND
+        Tel.+358-31-3763273
+        FidoNet 2:222/352.20
+        Internet Jussi.Lahdenniemi@p20.f352.n222.z2.fidonet.org
+
+        Otto Chrons
+        Pyydyspolku 5
+        SF-36200 Kangasala
+        FINLAND
+        Fidonet 2:222/352.7
+        InterNet c142092@cc.tut.fi
+
