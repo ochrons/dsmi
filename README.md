@@ -12,4 +12,4 @@ MOD and STM (Scream Tracker) formats, hence the name. Later on more formats were
 popular module player on the PC DOS platform (see it [in action](https://www.youtube.com/watch?v=x_ejD9YstfY)). It was 
 licensed as "card ware", which meant I received hundreds of  post cards from users all around the world :smile:
 
-Enjoy browsing some old source code (which might predate your birth if you are less than 24 years old)!
+Enjoy browsing some old source code (which might predate your birth if you were born after 1993)!
